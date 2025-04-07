@@ -12,37 +12,16 @@
       "static/chunks/4bd1b696-6d2306eb8cdc79dd.js",
       "static/chunks/684-1063a51ce5fe50f9.js",
       "static/chunks/main-app-e634c45c1feb0263.js",
-      "static/css/600d59d0a8b9707a.css",
+      "static/css/e125e910507ffac4.css",
       "static/chunks/63-7e887e1530b0b41c.js",
       "static/chunks/app/layout-fdb171f1a7255c97.js"
-    ],
-    "/(main)/derecho-inmobiliario/page": [
-      "static/chunks/webpack-f9cb99d5bc5e0bcb.js",
-      "static/chunks/4bd1b696-6d2306eb8cdc79dd.js",
-      "static/chunks/684-1063a51ce5fe50f9.js",
-      "static/chunks/main-app-e634c45c1feb0263.js",
-      "static/chunks/app/(main)/derecho-inmobiliario/page-9c75e136a62d8bfd.js"
-    ],
-    "/(main)/divorcios-no-disputados/page": [
-      "static/chunks/webpack-f9cb99d5bc5e0bcb.js",
-      "static/chunks/4bd1b696-6d2306eb8cdc79dd.js",
-      "static/chunks/684-1063a51ce5fe50f9.js",
-      "static/chunks/main-app-e634c45c1feb0263.js",
-      "static/chunks/app/(main)/divorcios-no-disputados/page-69cad8b9c1a37165.js"
-    ],
-    "/(main)/propiedad-intelectual/page": [
-      "static/chunks/webpack-f9cb99d5bc5e0bcb.js",
-      "static/chunks/4bd1b696-6d2306eb8cdc79dd.js",
-      "static/chunks/684-1063a51ce5fe50f9.js",
-      "static/chunks/main-app-e634c45c1feb0263.js",
-      "static/chunks/app/(main)/propiedad-intelectual/page-af7b9cacde6bf625.js"
     ],
     "/page": [
       "static/chunks/webpack-f9cb99d5bc5e0bcb.js",
       "static/chunks/4bd1b696-6d2306eb8cdc79dd.js",
       "static/chunks/684-1063a51ce5fe50f9.js",
       "static/chunks/main-app-e634c45c1feb0263.js",
-      "static/chunks/app/page-b156bd68c12b16c2.js"
+      "static/chunks/app/page-687dfdffc8d1b6e5.js"
     ],
     "/(main)/derecho-penal/page": [
       "static/chunks/webpack-f9cb99d5bc5e0bcb.js",
@@ -51,18 +30,7 @@
       "static/chunks/main-app-e634c45c1feb0263.js",
       "static/chunks/63-7e887e1530b0b41c.js",
       "static/chunks/411-a884d7fa04fc696a.js",
-      "static/chunks/855-c26bb34d08ab1a55.js",
-      "static/chunks/app/(main)/derecho-penal/page-8752e741ebf4474f.js"
-    ],
-    "/(main)/derecho-familiar/page": [
-      "static/chunks/webpack-f9cb99d5bc5e0bcb.js",
-      "static/chunks/4bd1b696-6d2306eb8cdc79dd.js",
-      "static/chunks/684-1063a51ce5fe50f9.js",
-      "static/chunks/main-app-e634c45c1feb0263.js",
-      "static/chunks/63-7e887e1530b0b41c.js",
-      "static/chunks/411-a884d7fa04fc696a.js",
-      "static/chunks/855-c26bb34d08ab1a55.js",
-      "static/chunks/app/(main)/derecho-familiar/page-5964d7a7013cfd72.js"
+      "static/chunks/app/(main)/derecho-penal/page-26cd23f047369ab4.js"
     ]
   }
 }
