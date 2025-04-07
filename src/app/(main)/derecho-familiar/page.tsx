@@ -1,8 +1,8 @@
 
-import Footer from '@/components/Footer'
-import HeroCarousel from '@/components/HeroCarrousel'
-import ServiceDetails from '@/components/ServiceDetails'
-import TestimonialsCarousel from '@/components/TestomonialsCarrousel'
+import Footer from '@/app/components/Footer'
+import HeroCarousel from '@/app/components/HeroCarrousel'
+import ServiceDetails from '@/app/components/ServiceDetails'
+import TestimonialsCarousel from '@/app/components/TestimonialsCarrousel'
 
 
 export const metadata = {

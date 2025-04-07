@@ -1,0 +1,4 @@
+{
+  "/(main)/derecho-penal/page": "app/(main)/derecho-penal/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+}
