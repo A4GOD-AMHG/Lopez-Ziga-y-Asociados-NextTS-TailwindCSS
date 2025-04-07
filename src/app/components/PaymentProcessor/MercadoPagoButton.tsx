@@ -12,7 +12,10 @@ type MercadoPagoButtonProps = {
 
 export default function MercadoPagoButton({ paymentData, onSuccess, onError }: MercadoPagoButtonProps) {
     useEffect(() => {
-        if (typeof window.MercadoPago === 'undefined') return
+        if (!window.MercadoPago) {
+            console.error('MercadoPago SDK no está disponible');
+            return;
+        }
 
         const loadMercadoPago = async () => {
             try {
