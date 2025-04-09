@@ -1,8 +1,47 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: '#70ac60';
-  --color-secondary: '#90c67b';
-  --color-light: '#d2dacf';
-  --color-gray: '#757575';
+  --color-primary: #70ac60;
+  --color-secondary: #90c67b;
+  --color-light: #d2dacf;
+  --color-gray: #757575;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-content {
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.modal-content.closing {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

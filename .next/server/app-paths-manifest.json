@@ -1,6 +1,5 @@
 {
+  "/(marketing)/page": "app/(marketing)/page.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/page": "app/page.js",
-  "/(main)/derecho-penal/page": "app/(main)/derecho-penal/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }
