@@ -64,13 +64,24 @@ export default function Footer() {
         }
     };
 
+    const closeModal = () => {
+        const modalContent = document.querySelector('.modal-content');
+        if (modalContent) {
+            modalContent.classList.add('closing');
+            setTimeout(() => {
+                setModal(prev => ({ ...prev, show: false }));
+            }, 300);
+        }
+    };
+
     return (
         <footer className="bg-gray-100 text-gray">
             {modal.show && (
-                <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-                    <div className="bg-white rounded-lg p-8 max-w-sm w-full relative">
+                <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 transition-opacity duration-300">
+                    <div className={`bg-white rounded-lg p-8 max-w-sm w-full relative transform transition-all duration-300 scale-95 modal-content
+                        ${modal.show ? 'animate-fade-in' : 'opacity-0 scale-90'}`}>
                         <div
-                            onClick={() => setModal(prev => ({ ...prev, show: false }))}
+                            onClick={closeModal}
                             className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
                         >
                             <FiX className="text-xl w-6 h-6" />
@@ -83,7 +94,7 @@ export default function Footer() {
                             )}
                             <p className="text-lg font-medium mb-4">{modal.message}</p>
                             <button
-                                onClick={() => setModal(prev => ({ ...prev, show: false }))}
+                                onClick={closeModal}
                                 className={`px-6 py-2 cursor-pointer rounded-lg ${modal.type === 'success'
                                     ? 'bg-primary hover:bg-secondary'
                                     : 'bg-red-500 hover:bg-red-600'
@@ -110,7 +121,7 @@ export default function Footer() {
                                     setEmail(e.target.value);
                                     setIsValidEmail(true);
                                 }}
-                                className={`flex-grow relative px-6 w-full placeholder:text-gray-700 md:w-auto py-3 rounded-lg border bg-white focus:outline-none 
+                                className={`flex-grow relative px-6 w-full placeholder:text-gray-600 md:w-auto py-3 rounded-lg border bg-white focus:outline-none 
                                     ${isValidEmail ? "focus:ring-secondary" : "border-red-500 focus:ring-red-500"
                                     }`}
                             />

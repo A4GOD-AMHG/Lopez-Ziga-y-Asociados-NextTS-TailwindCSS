@@ -94,7 +94,6 @@ export default function DerechoPenal() {
             <ServiceDetails {...serviceDetails} />
             <FeaturedAttorneys attorneys={attorneys} />
             <TestimonialsCarousel service="penal" />
-            <Footer />
         </div>
     )
 }
