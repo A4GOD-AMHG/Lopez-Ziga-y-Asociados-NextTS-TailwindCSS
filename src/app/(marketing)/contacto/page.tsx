@@ -1,42 +1,117 @@
-import ContactForm from '@/app/components/ContactForm'
-import MapLocations from '@/app/components/MapLocations'
+'use client'
+
+import { motion } from 'framer-motion'
+import { FiMapPin } from 'react-icons/fi'
+import dynamic from 'next/dynamic'
+
+const Map = dynamic(() => import('@/app/components/Map'), {
+    ssr: false,
+    loading: () => <div className="h-64 bg-gray-200 animate-pulse rounded-xl" />
+})
 
 export default function ContactPage() {
     return (
-        <div className="container mx-auto px-4 py-16">
-            <h1 className="text-4xl font-bold text-center mb-12">Contacto</h1>
+        <main className="relative mt-24">
+            <section className="py-20 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-6xl mx-auto">
+                        <h1 className="text-5xl font-bold text-primary mb-12 text-center">Contáctanos</h1>
 
-            <div className="grid md:grid-cols-2 gap-12">
-                <div>
-                    <ContactForm />
-                </div>
+                        <div className="flex flex-col lg:flex-row gap-12">
+                            {/* Formulario */}
+                            <motion.form
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ duration: 0.5 }}
+                                className="w-full lg:max-w-xl mx-auto space-y-6"
+                            >
+                                <div>
+                                    <label className="block text-gray-700 text-lg mb-2">Nombre completo</label>
+                                    <input
+                                        type="text"
+                                        placeholder="Introduce tu nombre completo"
+                                        className="w-full p-4 rounded-lg border bg-white border-gray-300 focus:ring-2 focus:ring-primary"
+                                    />
+                                </div>
 
-                <div className="space-y-8">
-                    <div className="bg-light p-6 rounded-lg">
-                        <h2 className="text-2xl font-semibold mb-4">Nuestras Oficinas</h2>
-                        <div className="space-y-6">
-                            <div>
-                                <h3 className="font-semibold text-primary">Ciudad de México</h3>
-                                <p>Valle de Zumpango 15, 53050 Naucalpan de Juárez, Méx.</p>
-                            </div>
-                            <div>
-                                <h3 className="font-semibold text-primary">Saltillo</h3>
-                                <p>Cocoyoc – Oaxtepec 26, El Partidor, 62736 Cocoyoc, Mor.</p>
-                            </div>
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label className="block text-gray-700 text-lg mb-2">Email</label>
+                                        <input
+                                            type="email"
+                                            placeholder="Introduce tu correo electrónico"
+                                            className="w-full p-4 rounded-lg border bg-white border-gray-300 focus:ring-2 focus:ring-primary"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className="block text-gray-700 text-lg mb-2">Teléfono</label>
+                                        <input
+                                            type="tel"
+                                            placeholder="Introduce tu número de teléfono"
+                                            className="w-full p-4 rounded-lg border bg-white border-gray-300 focus:ring-2 focus:ring-primary"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label className="block text-gray-700 text-lg mb-2">Mensaje</label>
+                                    <textarea
+                                        rows={5}
+                                        placeholder="Escribe tu mensaje aquí"
+                                        className="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary resize-none"
+                                    />
+                                </div>
+
+                                <button className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-secondary transition-colors w-full">
+                                    Enviar Mensaje
+                                </button>
+                            </motion.form>
+
+                            {/* Oficinas */}
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ duration: 0.5, delay: 0.2 }}
+                                className="w-full lg:max-w-2xl"
+                            >
+                                <div className="bg-white p-8 rounded-xl shadow-md">
+                                    <h3 className="text-3xl font-bold text-primary mb-6">Nuestras Oficinas</h3>
+
+                                    <div className="grid md:grid-cols-2 gap-8">
+                                        <div className="space-y-4">
+                                            <div className="flex items-center gap-4 mb-4">
+                                                <FiMapPin className="text-2xl text-primary" />
+                                                <h4 className="text-xl font-semibold">Ciudad de México</h4>
+                                            </div>
+                                            <p className="text-gray-600 mb-4">
+                                                Av. Paseo de la Reforma 509, Cuauhtémoc<br />
+                                                CDMX, 06500
+                                            </p>
+                                            <div className="h-64 rounded-lg overflow-hidden">
+                                                <Map lat={19.4326} lng={-99.1332} />
+                                            </div>
+                                        </div>
+
+                                        <div className="space-y-4">
+                                            <div className="flex items-center gap-4 mb-4">
+                                                <FiMapPin className="text-2xl text-primary" />
+                                                <h4 className="text-xl font-semibold">Saltillo</h4>
+                                            </div>
+                                            <p className="text-gray-600 mb-4">
+                                                Blvd. Fundadores 2255, Saltillo<br />
+                                                Coahuila, 25280
+                                            </p>
+                                            <div className="h-64 rounded-lg overflow-hidden">
+                                                <Map lat={25.4383} lng={-101.0053} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
                         </div>
                     </div>
-
-                    <div className="bg-light p-6 rounded-lg">
-                        <h2 className="text-2xl font-semibold mb-4">Información de Contacto</h2>
-                        <ul className="space-y-3">
-                            <li>📞 +52 55 14 08 39 82</li>
-                            <li>✉️ contacto@lopezzigayasociados.com.mx</li>
-                        </ul>
-                    </div>
-
-                    <MapLocations />
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
     )
 }

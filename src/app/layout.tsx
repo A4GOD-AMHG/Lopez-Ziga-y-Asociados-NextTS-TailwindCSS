@@ -37,9 +37,7 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${inter.className} bg-gray-50 overflow-y-scroll scrollbar-hide scroll-smooth`}>
         <Header />
-        <main className="min-h-screen">
-          {children}
-        </main>
+        {children}
         <Footer />
         <ScrollToTop />
       </body>

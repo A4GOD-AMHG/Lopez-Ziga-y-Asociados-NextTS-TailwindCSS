@@ -1,6 +1,5 @@
 
 import FeaturedAttorneys from '@/app/components/FeaturedAttorneys'
-import Footer from '@/app/components/Footer'
 import HeroCarousel from '@/app/components/HeroCarrousel'
 import ServiceDetails from '@/app/components/ServiceDetails'
 import TestimonialsCarousel from '@/app/components/TestimonialsCarrousel'

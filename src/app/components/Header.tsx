@@ -94,6 +94,7 @@ export default function Header() {
                             </div>
                         </div>
                     </div>
+                    <AnimatedLink href="/contacto">Contacto</AnimatedLink>
                     <AnimatedLink href="/preguntas-frecuentes">Preguntas Frecuentes</AnimatedLink>
                 </nav>
 
@@ -215,6 +216,9 @@ export default function Header() {
                                         </div>
                                     </div>
                                 </div>
+                            </li>
+                            <li className="mr-2">
+                                <AnimatedLink href="/contacto" onClick={closeMenu} extraClasses="inline-block">Contacto</AnimatedLink>
                             </li>
                             <li className="mr-2">
                                 <AnimatedLink href="/preguntas-frecuentes" onClick={closeMenu} extraClasses="inline-block">Preguntas Frecuentes</AnimatedLink>

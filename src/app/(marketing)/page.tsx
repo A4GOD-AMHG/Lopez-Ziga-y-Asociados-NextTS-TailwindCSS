@@ -5,7 +5,7 @@ import HeroSection from '@/app/components/Sections/HeroSection'
 import ServicesSection from '@/app/components/Sections/ServicesSection'
 import StatsSection from '@/app/components/Sections/StatsSection'
 import TeamSection from '@/app/components/Sections/TeamSection'
-import TestimonialsCarousel from '@/app/components/Sections/TestimonialsSection'
+import TestimonialsSection from '@/app/components/Sections/TestimonialsSection'
 
 export default function HomePage() {
     return (
@@ -56,7 +56,7 @@ export default function HomePage() {
 
             <StatsSection />
             <TeamSection />
-            <TestimonialsCarousel />
+            <TestimonialsSection />
         </main>
     )
 }
