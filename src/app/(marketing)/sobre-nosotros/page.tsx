@@ -5,7 +5,7 @@ import TeamSection from '@/app/components/Sections/TeamSection'
 
 export default function AboutPage() {
     return (
-        <main className="relative mt-24">
+        <main className="relative mt-16 sm:mt-24">
             <section className="py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <motion.div
@@ -27,6 +27,7 @@ export default function AboutPage() {
                             <motion.div
                                 initial={{ scale: 0.9 }}
                                 whileInView={{ scale: 1 }}
+                                viewport={{ once: true }}
                                 className="bg-white p-8 rounded-xl shadow-md"
                             >
                                 <h3 className="text-3xl font-bold text-primary mb-4">Valores Fundamentales</h3>

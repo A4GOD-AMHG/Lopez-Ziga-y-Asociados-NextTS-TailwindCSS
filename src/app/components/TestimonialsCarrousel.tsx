@@ -4,7 +4,6 @@ import useEmblaCarousel from 'embla-carousel-react'
 import { testimonialsByService } from '@/lib/testimonials'
 import Image from 'next/image'
 import { useCallback, useEffect, useState } from 'react'
-import { NextButton, PrevButton } from './CarouselButtons'
 
 export default function TestimonialsCarousel({ service }: { service: string }) {
     const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -15,10 +14,6 @@ export default function TestimonialsCarousel({ service }: { service: string }) {
 
     const [selectedIndex, setSelectedIndex] = useState(0)
     const testimonials = testimonialsByService[service as keyof typeof testimonialsByService] || []
-
-    const scrollPrev = useCallback(() => {
-        if (emblaApi) emblaApi.scrollPrev()
-    }, [emblaApi])
 
     const scrollNext = useCallback(() => {
         if (emblaApi) emblaApi.scrollNext()
@@ -80,7 +75,7 @@ export default function TestimonialsCarousel({ service }: { service: string }) {
                                             {[...Array(5)].map((_, i) => (
                                                 <svg
                                                     key={i}
-                                                    className={`w-5 h-5 ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`}
+                                                    className={`w-5 h-5 ${i < testimonial.rating ? 'text-primary' : 'text-gray-300'}`}
                                                     fill="currentColor"
                                                     viewBox="0 0 20 20"
                                                 >
@@ -105,14 +100,6 @@ export default function TestimonialsCarousel({ service }: { service: string }) {
                         ))}
                     </div>
 
-                    <PrevButton
-                        onClick={scrollPrev}
-                        className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-8 md:-translate-x-12 hover:bg-[#90c67b] transition"
-                    />
-                    <NextButton
-                        onClick={scrollNext}
-                        className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-8 md:translate-x-12 hover:bg-[#90c67b] transition"
-                    />
                 </div>
             </div>
         </section>

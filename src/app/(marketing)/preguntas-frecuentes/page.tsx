@@ -35,7 +35,7 @@ export default function FAQPage() {
     const [openIndex, setOpenIndex] = useState<number | null>(null)
 
     return (
-        <main className="relative mt-24">
+        <main className="relative mt-16 sm:mt-24">
             <section className="py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <h1 className="text-5xl font-bold text-primary mb-12 text-center">Preguntas Frecuentes</h1>
@@ -45,8 +45,8 @@ export default function FAQPage() {
                             <div
                                 key={index}
                                 className={`border-2 rounded-xl bg-white transition-all ${openIndex === index
-                                        ? 'border-primary shadow-lg'
-                                        : 'border-gray-200 hover:border-primary/30'
+                                    ? 'border-primary shadow-lg'
+                                    : 'border-gray-200 hover:border-primary/30'
                                     }`}
                             >
                                 <motion.button

@@ -7,9 +7,10 @@ import { useState, useEffect } from 'react'
 interface ConsultationModalProps {
     isOpen: boolean;
     onClose: () => void;
+    service?: string;
 }
 
-export default function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
+export default function ConsultationModal({ isOpen, onClose, service }: ConsultationModalProps) {
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [formStatus, setFormStatus] = useState<'idle' | 'success' | 'error'>('idle')
     const [email, setEmail] = useState('')
@@ -130,7 +131,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                                         </div>
                                     </div>
 
-                                    <div>
+                                    {!service ? <div>
                                         <label htmlFor="area-consulta" className="block text-gray-700 mb-2">Área de consulta</label>
                                         <select
                                             id="area-consulta"
@@ -140,7 +141,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                                             <option >Derecho Corporativo</option>
                                             <option >Derecho Laboral</option>
                                         </select>
-                                    </div>
+                                    </div> : <div>Consulta de {service}</div>}
 
                                     <div>
                                         <label className="block text-gray-700 mb-2">Descripción breve</label>

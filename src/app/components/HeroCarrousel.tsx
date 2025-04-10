@@ -3,8 +3,8 @@
 import { useCallback, useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
-import { NextButton, PrevButton } from './CarouselButtons'
-import PaymentModal from './PaymentsModal'
+// import PaymentModal from './PaymentsModal'
+import ConsultationModal from './Modals/ConsultationModal'
 
 type Slide = {
     title: string
@@ -16,15 +16,11 @@ type Slide = {
     videoUrl?: string
 }
 
-export default function HeroCarousel({ slides }: { slides: Slide[] }) {
+export default function HeroCarousel({ slides, service }: { slides: Slide[], service: string }) {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
     const [selectedIndex, setSelectedIndex] = useState(0)
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [isVideoPlaying, setIsVideoPlaying] = useState(false)
-
-    const scrollPrev = useCallback(() => {
-        if (emblaApi) emblaApi.scrollPrev()
-    }, [emblaApi])
 
     const scrollNext = useCallback(() => {
         if (emblaApi) emblaApi.scrollNext()
@@ -115,15 +111,14 @@ export default function HeroCarousel({ slides }: { slides: Slide[] }) {
                 ))}
             </div>
 
-            <PrevButton onClick={scrollPrev} />
-            <NextButton onClick={scrollNext} />
-
+            <ConsultationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} service={service} />
+            {/* 
             <PaymentModal
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
                 serviceName={slides[selectedIndex]?.title || ''}
                 servicePrice={slides[selectedIndex]?.price || 0}
-            />
+            /> */}
         </div>
     )
 }

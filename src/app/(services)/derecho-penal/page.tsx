@@ -16,21 +16,21 @@ const slides = [
     {
         title: "Defensa Penal Especializada en México",
         description: "Expertos en procesos judiciales complejos: desde delitos menores hasta casos de alta repercusión mediática. Protección legal integral con estrategias personalizadas.",
-        ctaText: "Consulta Gratuita",
+        ctaText: "Agenda tu Consulta",
         bgImage: "/images/penal-bg1.jpg",
         price: 5000,
     },
     {
         title: "Juicios Orales con Resultados Comprobados",
         description: "Representación experta en el nuevo sistema de justicia penal. Más de 200 casos resueltos exitosamente en los últimos 3 años.",
-        ctaText: "Ver Casos de Éxito",
+        ctaText: "Agenda tu Consulta",
         bgImage: "/images/penal-bg2.jpg",
         price: 4000,
     },
     {
         title: "Defensa en Delitos Federales",
         description: "Especialistas en derecho penal federal: narcotráfico, lavado de dinero, delitos fiscales y delincuencia organizada.",
-        ctaText: "Conoce Nuestro Enfoque",
+        ctaText: "Agenda tu Consulta",
         bgImage: "/images/penal-bg3.jpg",
         price: 6000,
     },
@@ -72,7 +72,7 @@ const attorneys = [
         experience: "15 años",
         cases: "450+",
         email: "a.torres@lopezziga.com",
-        photo: "/images/attorney1.jpg"
+        photo: "/images/lawyer1.jpg"
     },
     {
         name: "Dra. Valeria Mendoza",
@@ -80,19 +80,20 @@ const attorneys = [
         experience: "12 años",
         cases: "320+",
         email: "v.mendoza@lopezziga.com",
-        photo: "/images/attorney2.jpg"
+        photo: "/images/lawyer2.jpg"
     }
 ]
 
 export default function DerechoPenal() {
     return (
-        <div className="min-h-screen flex flex-col">
+        <main className="min-h-screen mt-16 sm:mt-24 flex flex-col">
             <HeroCarousel
                 slides={slides}
+                service="Derecho Penal"
             />
             <ServiceDetails {...serviceDetails} />
             <FeaturedAttorneys attorneys={attorneys} />
             <TestimonialsCarousel service="penal" />
-        </div>
+        </main>
     )
 }

@@ -28,6 +28,7 @@ export default function TeamSection() {
                             key={member.id}
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                             className="bg-gray-50 rounded-xl p-6 text-center"
                         >
@@ -49,6 +50,7 @@ export default function TeamSection() {
                                     key={member.id}
                                     initial={{ opacity: 0, y: 30 }}
                                     animate={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
                                     exit={{ opacity: 0, y: -30 }}
                                     transition={{ delay: index * 0.1 }}
                                     className="bg-gray-50 rounded-xl p-6 text-center"

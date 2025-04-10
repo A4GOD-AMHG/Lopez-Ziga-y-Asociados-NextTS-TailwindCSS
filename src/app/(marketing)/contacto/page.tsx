@@ -11,17 +11,17 @@ const Map = dynamic(() => import('@/app/components/Map'), {
 
 export default function ContactPage() {
     return (
-        <main className="relative mt-24">
+        <main className="relative mt-16 sm:mt-24">
             <section className="py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto">
                         <h1 className="text-5xl font-bold text-primary mb-12 text-center">Contáctanos</h1>
 
                         <div className="flex flex-col lg:flex-row gap-12">
-                            {/* Formulario */}
                             <motion.form
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
+                                viewport={{ once: true }}
                                 transition={{ duration: 0.5 }}
                                 className="w-full lg:max-w-xl mx-auto space-y-6"
                             >
@@ -67,10 +67,10 @@ export default function ContactPage() {
                                 </button>
                             </motion.form>
 
-                            {/* Oficinas */}
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
+                                viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: 0.2 }}
                                 className="w-full lg:max-w-2xl"
                             >

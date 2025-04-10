@@ -1,23 +1,27 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { FiBriefcase, FiHome, FiUsers, FiArrowRight } from 'react-icons/fi'
 
 const services = [
     {
         title: 'Derecho Penal',
         icon: <FiBriefcase className="text-7xl text-primary mb-6" />,
-        description: 'Defensa legal especializada en delitos económicos y financieros'
+        description: 'Defensa legal especializada en delitos económicos y financieros',
+        href: '/derecho-penal'
     },
     {
         title: 'Derecho Inmobiliario',
         icon: <FiHome className="text-7xl text-primary mb-6" />,
-        description: 'Asesoría en transacciones y litigios de bienes raíces'
+        description: 'Asesoría en transacciones y litigios de bienes raíces',
+        href: '/derecho-inmobiliario'
     },
     {
         title: 'Derecho Familiar',
         icon: <FiUsers className="text-7xl text-primary mb-6" />,
-        description: 'Gestión de conflictos familiares y auditorías legales'
+        description: 'Gestión de conflictos familiares y auditorías legales',
+        href: '/derecho-familiar'
     }
 ]
 
@@ -48,10 +52,10 @@ export default function ServicesSection() {
                                 <div className="inline-block">{service.icon}</div>
                                 <h3 className="text-3xl md:text-3xl font-bold mb-4">{service.title}</h3>
                                 <p className="text-gray-600 mb-6 text-xl">{service.description}</p>
-                                <button className="text-primary font-semibold cursor-pointer hover:underline flex items-center justify-center gap-2 mx-auto">
+                                <Link href={service.href} className="text-primary font-semibold cursor-pointer hover:underline flex items-center justify-center gap-2 mx-auto">
                                     Ver detalles
                                     <FiArrowRight className="text-xl" />
-                                </button>
+                                </Link>
                             </div>
                         </motion.div>
                     ))}

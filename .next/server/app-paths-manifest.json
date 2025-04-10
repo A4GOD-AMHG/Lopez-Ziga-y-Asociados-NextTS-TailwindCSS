@@ -1,0 +1,10 @@
+{
+  "/(marketing)/contacto/page": "app/(marketing)/contacto/page.js",
+  "/(marketing)/page": "app/(marketing)/page.js",
+  "/(services)/derecho-familiar/page": "app/(services)/derecho-familiar/page.js",
+  "/(services)/derecho-inmobiliario/page": "app/(services)/derecho-inmobiliario/page.js",
+  "/(services)/derecho-penal/page": "app/(services)/derecho-penal/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/newsletter/route": "app/api/newsletter/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+}
