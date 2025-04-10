@@ -45,3 +45,29 @@
 .animate-fade-in {
   animation: fade-in 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.parallax-bg {
+  background: url('/images/law-bg.jpg') center/cover fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .parallax-bg {
+    background-attachment: scroll;
+  }
+}
+
+.parallax-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
