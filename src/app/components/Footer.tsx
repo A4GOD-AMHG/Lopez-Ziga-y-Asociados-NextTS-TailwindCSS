@@ -168,8 +168,8 @@ export default function Footer() {
                             Enlaces Rápidos
                         </h3>
                         <ul className="space-y-3 portrait:space-y-2">
+                            <li><a href="/" className="text-gray-500 text-lg font-normal hover:text-gray-700 transition-colors">Inicio</a></li>
                             <li><a href="/sobre-nosotros" className="text-gray-500 text-lg font-normal hover:text-gray-700 transition-colors">Sobre Nosotros</a></li>
-                            <li><a href="/servicios" className="text-gray-500 text-lg font-normal hover:text-gray-700 transition-colors">Servicios</a></li>
                             <li><a href="/contacto" className="text-gray-500 text-lg font-normal hover:text-gray-700 transition-colors">Contacto</a></li>
                             <li><a href="/preguntas-frecuentes" className="text-gray-500 text-lg font-normal hover:text-gray-700 transition-colors">Preguntas Frecuentes</a></li>
                         </ul>
