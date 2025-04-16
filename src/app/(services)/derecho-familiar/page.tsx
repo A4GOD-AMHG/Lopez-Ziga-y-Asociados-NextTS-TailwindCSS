@@ -13,23 +13,23 @@ const slides = [
     {
         title: "Soluciones Legales para Familias",
         description: "Manejo sensible de casos de divorcio, custodia y pensión alimenticia. Protección de derechos familiares con enfoque humano.",
-        ctaText: "Agenda tu consulta",
+        ctaText: "Agenda tu consulta (1000)",
         bgImage: "/images/familiar-bg1.jpg",
-        price: 6000,
+        price: 1000,
     },
     {
         title: "Gestión de Sucesiones y Herencias",
-        description: "Asesoría especializada en testamentos, sucesiones intestadas y división de bienes familiares. Más de 120 casos resueltos.",
-        ctaText: "Agenda tu consulta",
+        description: "Asesoría especializada en testamentos, sucesiones intestadas y división de bienes familiares.",
+        ctaText: "Agenda tu consulta (1000)",
         bgImage: "/images/familiar-bg2.jpg",
-        price: 7000,
+        price: 1000,
     },
     {
-        title: "Protección de Menores",
-        description: "Defensa legal especializada en custodia, patria potestad y régimen de convivencia. Respeto total al interés superior del menor.",
-        ctaText: "Agenda tu consulta",
+        title: "Protección de Menores, acuerdos de guardia y convivencia",
+        description: "Defensa legal especializada en convenios de guardia y custodia, patria potestad, así como régimen de visitas. Respeto total al interés superior del menor.",
+        ctaText: "Agenda tu consulta (1000)",
         bgImage: "/images/familiar-bg3.jpg",
-        price: 6500,
+        price: 1000,
     }
 ]
 

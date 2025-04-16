@@ -137,9 +137,9 @@ export default function ConsultationModal({ isOpen, onClose, service }: Consulta
                                             id="area-consulta"
                                             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                                         >
-                                            <option >Derecho Penal</option>
-                                            <option >Derecho Corporativo</option>
-                                            <option >Derecho Laboral</option>
+                                            <option >Derecho Penal (1500)</option>
+                                            <option >Derecho Familiar (1000)</option>
+                                            <option >Derecho Inmobiliario (1500)</option>
                                         </select>
                                     </div> : <div>Consulta de {service}</div>}
 

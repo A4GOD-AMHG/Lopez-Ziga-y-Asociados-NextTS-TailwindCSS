@@ -40,17 +40,17 @@ export default function Header() {
                         onMouseLeave={() => setServicesOpen(false)}
                     >
                         <button className="flex items-center space-x-1 cursor-pointer relative">
-                            <span className="relative text-lg font-medium">
+                            <span className="relative text-gray-700 hover:text-gray-900 text-xl font-medium">
                                 Servicios
                                 <span className="absolute -bottom-1 left-0 w-0 h-[4px] bg-primary transition-all duration-300 group-hover:w-full"></span>
                                 {["/derecho-penal", "/derecho-familiar", "/derecho-inmobiliario"].includes(pathname) && (
                                     <span className="absolute -bottom-1 left-0 h-[4px] bg-primary w-full"></span>
                                 )}
                             </span>
-                            <FiChevronDown className="transition-transform duration-200 group-hover:rotate-180" />
+                            <FiChevronDown size={18} className="transition-transform duration-200 group-hover:rotate-180" />
                         </button>
 
-                        <div className={`absolute top-10 left-0 bg-gray-100 shadow-lg rounded-lg min-w-[220px] transition-all duration-300 ${servicesOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+                        <div className={`absolute top-10 left-0 bg-gray-100 shadow-lg rounded-lg min-w-[240px] transition-all duration-300 ${servicesOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
                             <div className="relative group/item">
                                 <AnimatedLink
                                     href="/derecho-penal"
@@ -110,7 +110,7 @@ export default function Header() {
                             />
                         </div>
                         <a
-                            href="tel:+525555555555"
+                            href="tel:+52 5514083982"
                             className="bg-primary hover:bg-secondary text-white px-5 py-2.5 text-lg rounded-lg flex items-center transition-all shadow-md whitespace-nowrap"
                         >
                             <svg
@@ -124,7 +124,7 @@ export default function Header() {
                             Llama ahora
                         </a>
                         <a
-                            href="https://wa.me/525555555555"
+                            href="https://wa.me/+52 5514083982"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-[#25D366] hover:bg-[#1DA851] text-white px-5 py-2.5 text-lg rounded-lg flex items-center transition-all shadow-md whitespace-nowrap"
@@ -182,7 +182,7 @@ export default function Header() {
                 </div>
             </div>
 
-            <div className={`absolute right-0 lg:hidden pl-5 bg-gray-100 overflow-hidden transform transition-transform duration-300 origin-top shadow-lg ${menuOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"}`}>
+            <div className={`absolute right-0 lg:hidden pl-5 bg-gray-100 overflow-hidden rounded-bl-2xl transform transition-transform duration-300 origin-top shadow-lg ${menuOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"}`}>
                 <nav className="flex justify-end mx-auto px-4 py-3">
                     <div className="inline-block">
                         <ul className="space-y-1 text-right">
@@ -196,7 +196,7 @@ export default function Header() {
                                 <div className="relative">
                                     <button
                                         onClick={toggleServices}
-                                        className="flex items-center justify-end text-lg font-medium gap-2 w-full"
+                                        className="flex items-center justify-end text-xl font-medium gap-1 w-full"
                                     >
                                         <span>Servicios</span>
                                         <FiChevronDown className={`transform transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />

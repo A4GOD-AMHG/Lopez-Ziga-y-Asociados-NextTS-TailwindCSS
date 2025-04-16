@@ -281,21 +281,21 @@ function ConsultationModal({ isOpen, onClose, service }) {
                                                 className: "w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                        children: "Derecho Penal"
+                                                        children: "Derecho Penal (1500)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/components/Modals/ConsultationModal.tsx",
                                                         lineNumber: 140,
                                                         columnNumber: 45
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                        children: "Derecho Corporativo"
+                                                        children: "Derecho Familiar (1000)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/components/Modals/ConsultationModal.tsx",
                                                         lineNumber: 141,
                                                         columnNumber: 45
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                        children: "Derecho Laboral"
+                                                        children: "Derecho Inmobiliario (1500)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/components/Modals/ConsultationModal.tsx",
                                                         lineNumber: 142,
@@ -442,7 +442,7 @@ function HeroSection() {
     const [isModalOpen, setIsModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-            className: "relative h-[70vh] sm:h-[90vh] flex items-center justify-center overflow-hidden",
+            className: "relative h-[50vh] mt-20 sm:h-[70vh] flex items-center justify-center overflow-hidden",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "parallax-bg"
@@ -469,6 +469,9 @@ function HeroSection() {
                             opacity: 1,
                             y: 0
                         },
+                        viewport: {
+                            once: true
+                        },
                         transition: {
                             duration: 0.8
                         },
@@ -482,7 +485,7 @@ function HeroSection() {
                                         className: "hidden md:block"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Sections/HeroSection.tsx",
-                                        lineNumber: 24,
+                                        lineNumber: 25,
                                         columnNumber: 39
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -490,22 +493,22 @@ function HeroSection() {
                                         children: "Legales"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Sections/HeroSection.tsx",
-                                        lineNumber: 25,
+                                        lineNumber: 26,
                                         columnNumber: 29
                                     }, this),
                                     " de Vanguardia"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/components/Sections/HeroSection.tsx",
-                                lineNumber: 23,
+                                lineNumber: 24,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-base sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto",
-                                children: "Recibe asesoramiento jurídico personalizado y efectivo, con más de 20 años de experiencia en derecho corporativo y comercial."
+                                children: "Recibe asesoramiento jurídico personalizado y efectivo, con más de 20 años de experiencia en derecho público y privado."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/Sections/HeroSection.tsx",
-                                lineNumber: 27,
+                                lineNumber: 28,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
@@ -523,13 +526,13 @@ function HeroSection() {
                                         className: "text-xl"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Sections/HeroSection.tsx",
-                                        lineNumber: 38,
+                                        lineNumber: 39,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/components/Sections/HeroSection.tsx",
-                                lineNumber: 31,
+                                lineNumber: 32,
                                 columnNumber: 25
                             }, this)
                         ]
@@ -548,7 +551,7 @@ function HeroSection() {
                     onClose: ()=>setIsModalOpen(false)
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/Sections/HeroSection.tsx",
-                    lineNumber: 43,
+                    lineNumber: 44,
                     columnNumber: 17
                 }, this)
             ]
@@ -1014,6 +1017,9 @@ function TeamSection() {
                                     opacity: 1,
                                     y: 0
                                 },
+                                viewport: {
+                                    once: true
+                                },
                                 transition: {
                                     delay: index * 0.1
                                 },
@@ -1025,7 +1031,7 @@ function TeamSection() {
                                         className: "w-full h-96 object-contain rounded-lg mb-4"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Sections/TeamSection.tsx",
-                                        lineNumber: 34,
+                                        lineNumber: 35,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1033,7 +1039,7 @@ function TeamSection() {
                                         children: member.name
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Sections/TeamSection.tsx",
-                                        lineNumber: 39,
+                                        lineNumber: 40,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1041,7 +1047,7 @@ function TeamSection() {
                                         children: member.role
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Sections/TeamSection.tsx",
-                                        lineNumber: 40,
+                                        lineNumber: 41,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1052,7 +1058,7 @@ function TeamSection() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/components/Sections/TeamSection.tsx",
-                                        lineNumber: 41,
+                                        lineNumber: 42,
                                         columnNumber: 29
                                     }, this)
                                 ]
@@ -1071,6 +1077,9 @@ function TeamSection() {
                                         opacity: 1,
                                         y: 0
                                     },
+                                    viewport: {
+                                        once: true
+                                    },
                                     exit: {
                                         opacity: 0,
                                         y: -30
@@ -1086,7 +1095,7 @@ function TeamSection() {
                                             className: "w-full h-96 object-contain rounded-lg mb-4"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Sections/TeamSection.tsx",
-                                            lineNumber: 56,
+                                            lineNumber: 58,
                                             columnNumber: 37
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1094,7 +1103,7 @@ function TeamSection() {
                                             children: member.name
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Sections/TeamSection.tsx",
-                                            lineNumber: 61,
+                                            lineNumber: 63,
                                             columnNumber: 37
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1102,7 +1111,7 @@ function TeamSection() {
                                             children: member.role
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Sections/TeamSection.tsx",
-                                            lineNumber: 62,
+                                            lineNumber: 64,
                                             columnNumber: 37
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1113,18 +1122,18 @@ function TeamSection() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/Sections/TeamSection.tsx",
-                                            lineNumber: 63,
+                                            lineNumber: 65,
                                             columnNumber: 37
                                         }, this)
                                     ]
                                 }, member.id, true, {
                                     fileName: "[project]/src/app/components/Sections/TeamSection.tsx",
-                                    lineNumber: 48,
+                                    lineNumber: 49,
                                     columnNumber: 33
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Sections/TeamSection.tsx",
-                            lineNumber: 45,
+                            lineNumber: 46,
                             columnNumber: 21
                         }, this)
                     ]
@@ -1145,19 +1154,19 @@ function TeamSection() {
                             className: "text-xl"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Sections/TeamSection.tsx",
-                            lineNumber: 76,
+                            lineNumber: 78,
                             columnNumber: 25
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FiChevronDown"], {
                             className: "text-xl"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Sections/TeamSection.tsx",
-                            lineNumber: 78,
+                            lineNumber: 80,
                             columnNumber: 25
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/Sections/TeamSection.tsx",
-                    lineNumber: 69,
+                    lineNumber: 71,
                     columnNumber: 17
                 }, this)
             ]
@@ -1462,35 +1471,28 @@ function HomePage() {
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                className: "text-3xl md:text-3xl font-semibold text-gray-800 mb-8",
-                                children: "Más de 20 años de experiencia"
+                                className: "text-xl sm:text-2xl font-semibold text-gray-800 mb-8",
+                                children: "Más de 7 años en el marcado"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(marketing)/page.tsx",
                                 lineNumber: 24,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-xl text-gray-700 space-y-6",
+                                className: "text-xl text-gray-800 space-y-6",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        children: "En Lopez Ziga & Asociados, contamos con más de 20 años de experiencia ofreciendo soluciones legales estratégicas a personas físicas y/o empresas en el ámbito del Derecho Público y Derecho Privado. Desde 2018, operamos como un despacho legal independiente, dedicado a brindar servicios jurídicos especializados para compañías que buscan una protección legal sólida y efectiva."
+                                        children: "Fundado en el 18 de diciembre del año 2018, Lopez Ziga & Asociados nació de la visión de crear un despacho legal diferente: más ágil, transparente y enfocado en resultados concretos para personas físicas y morales."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(marketing)/page.tsx",
                                         lineNumber: 28,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        children: "Nos especializamos en atender las necesidades legales de empresas en áreas clave como el derecho penal, derecho laboral y de derecho administrativo. Nuestro equipo de abogados garantiza transparencia y acceso constante a los expedientes digitales de nuestros clientes empresariales, proporcionando un asesoramiento continuo y personalizado."
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/(marketing)/page.tsx",
-                                        lineNumber: 31,
-                                        columnNumber: 29
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: "Trabajamos junto a ti y/o a tu empresa para proteger sus intereses y crear estrategias legales que resuelvan conflictos de manera ágil y justa. Nuestro enfoque está basado en la confianza y la colaboración, brindando soluciones integrales adaptadas a las necesidades específicas de cada organización."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(marketing)/page.tsx",
-                                        lineNumber: 34,
+                                        lineNumber: 31,
                                         columnNumber: 29
                                     }, this)
                                 ]
@@ -1510,21 +1512,21 @@ function HomePage() {
                                                 children: "Misión"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(marketing)/page.tsx",
-                                                lineNumber: 41,
+                                                lineNumber: 38,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-xl",
-                                                children: "Diseñar estrategias legales personalizadas para empresas, con el objetivo de resolver conflictos de forma rápida y eficiente, garantizando el cumplimiento normativo y la justicia en cada caso."
+                                                children: "Diseñar estrategias legales personalizadas para personas físicas y personas morales, con el objetivo de resolver conflictos de forma rápida y eficiente, garantizando el cumplimiento normativo y la justicia en cada caso."
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(marketing)/page.tsx",
-                                                lineNumber: 42,
+                                                lineNumber: 39,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(marketing)/page.tsx",
-                                        lineNumber: 40,
+                                        lineNumber: 37,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1535,27 +1537,27 @@ function HomePage() {
                                                 children: "Visión"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(marketing)/page.tsx",
-                                                lineNumber: 47,
+                                                lineNumber: 44,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-xl",
-                                                children: "Ser reconocidos como una firma legal líder en el ámbito empresarial en Naucalpan, Estado de México y Oaxtepec, Morelos, brindando asesoría jurídica confiable y soluciones efectivas a compañías de diversas industrias."
+                                                children: "Ser reconocidos como una firma legal confiable en el ámbito en Ciudad de México,  Estado de México y Estado de Morelos, brindando asesoría jurídica con apoyo a los criterios emitidos por la suprema corte de justicia de la nación, y la corte interamericana de derechos humanos."
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(marketing)/page.tsx",
-                                                lineNumber: 48,
+                                                lineNumber: 45,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(marketing)/page.tsx",
-                                        lineNumber: 46,
+                                        lineNumber: 43,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(marketing)/page.tsx",
-                                lineNumber: 39,
+                                lineNumber: 36,
                                 columnNumber: 25
                             }, this)
                         ]
@@ -1576,17 +1578,17 @@ function HomePage() {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$Sections$2f$StatsSection$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/(marketing)/page.tsx",
-                lineNumber: 57,
+                lineNumber: 54,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$Sections$2f$TeamSection$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/(marketing)/page.tsx",
-                lineNumber: 58,
+                lineNumber: 55,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$Sections$2f$TestimonialsSection$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/(marketing)/page.tsx",
-                lineNumber: 59,
+                lineNumber: 56,
                 columnNumber: 13
             }, this)
         ]

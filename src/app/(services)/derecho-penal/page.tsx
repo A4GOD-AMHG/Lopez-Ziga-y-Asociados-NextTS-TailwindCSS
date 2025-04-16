@@ -16,23 +16,23 @@ const slides = [
     {
         title: "Defensa Penal Especializada en México",
         description: "Expertos en procesos judiciales complejos: desde delitos menores hasta casos de alta repercusión mediática. Protección legal integral con estrategias personalizadas.",
-        ctaText: "Agenda tu Consulta",
+        ctaText: "Agenda tu Consulta (1500)",
         bgImage: "/images/penal-bg1.jpg",
-        price: 5000,
+        price: 1500,
     },
     {
         title: "Juicios Orales con Resultados Comprobados",
         description: "Representación experta en el nuevo sistema de justicia penal. Más de 200 casos resueltos exitosamente en los últimos 3 años.",
-        ctaText: "Agenda tu Consulta",
+        ctaText: "Agenda tu Consulta (1500)",
         bgImage: "/images/penal-bg2.jpg",
-        price: 4000,
+        price: 1500,
     },
     {
         title: "Defensa en Delitos Federales",
-        description: "Especialistas en derecho penal federal: narcotráfico, lavado de dinero, delitos fiscales y delincuencia organizada.",
-        ctaText: "Agenda tu Consulta",
+        description: "Especialistas en derechos penales y federales",
+        ctaText: "Agenda tu Consulta (1500)",
         bgImage: "/images/penal-bg3.jpg",
-        price: 6000,
+        price: 1500,
     },
     // {
     //     title: "Asesoría Legal Preventiva",
@@ -46,7 +46,7 @@ const slides = [
 
 const serviceDetails = {
     title: "Derecho Penal",
-    description: "Nuestro equipo de abogados penalistas cuenta con amplia experiencia en la defensa de casos complejos dentro del sistema de justicia penal mexicano, garantizando una defensa técnica sólida y estrategias legales personalizadas.",
+    description: "Con precios de 1500 las asesorías. Nuestro equipo de abogados penalistas cuenta con amplia experiencia en la defensa de casos complejos dentro del sistema de justicia penal mexicano, garantizando una defensa técnica sólida y estrategias legales personalizadas.",
     benefits: [
         "Defensa en todas las etapas del proceso penal",
         "Asesoría especializada en juicios orales",

@@ -109,7 +109,7 @@ export default function Footer() {
             <div className="container mx-auto px-4 pt-12 pb-6">
                 <div className="mb-10 text-center">
                     <div className="max-w-2xl mx-auto">
-                        <h3 className="text-2xl font-semibold mb-6 text-primary">
+                        <h3 className="text-2xl sm:text-3xl font-semibold mb-6 text-primary">
                             Suscríbete a nuestro boletín legal
                         </h3>
                         <form onSubmit={handleSubmit} className="flex flex-row portrait:flex-col items-center gap-4">

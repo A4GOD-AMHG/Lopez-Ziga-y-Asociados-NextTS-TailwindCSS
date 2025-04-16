@@ -17,7 +17,7 @@ export default function ServiceDetails({ title, description, benefits, process }
 
                     <div className="grid md:grid-cols-2 gap-8">
                         <div>
-                            <h3 className="text-xl font-semibold text-[#90c67b] mb-4">Beneficios</h3>
+                            <h3 className="text-xl font-semibold text-[#70ac60] mb-4">Beneficios</h3>
                             <ul className="space-y-3">
                                 {benefits.map((benefit, index) => (
                                     <li key={index} className="flex items-start">
@@ -32,7 +32,7 @@ export default function ServiceDetails({ title, description, benefits, process }
 
                         {process && (
                             <div>
-                                <h3 className="text-xl font-semibold text-[#90c67b] mb-4">Nuestro Proceso</h3>
+                                <h3 className="text-xl font-semibold text-[#70ac60] mb-4">Nuestro Proceso</h3>
                                 <ol className="space-y-3 list-decimal list-inside">
                                     {process.map((step, index) => (
                                         <li key={index} className="text-gray-700">

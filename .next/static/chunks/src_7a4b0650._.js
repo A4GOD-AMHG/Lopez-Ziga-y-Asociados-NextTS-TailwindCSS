@@ -281,21 +281,21 @@ function ConsultationModal({ isOpen, onClose, service }) {
                                                 className: "w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                        children: "Derecho Penal"
+                                                        children: "Derecho Penal (1500)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/components/Modals/ConsultationModal.tsx",
                                                         lineNumber: 140,
                                                         columnNumber: 45
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                        children: "Derecho Corporativo"
+                                                        children: "Derecho Familiar (1000)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/components/Modals/ConsultationModal.tsx",
                                                         lineNumber: 141,
                                                         columnNumber: 45
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                        children: "Derecho Laboral"
+                                                        children: "Derecho Inmobiliario (1500)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/components/Modals/ConsultationModal.tsx",
                                                         lineNumber: 142,
@@ -489,7 +489,7 @@ function HeroCarousel({ slides, service }) {
         isVideoPlaying
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "relative h-[600px] md:h-[700px] overflow-hidden",
+        className: "relative h-[600px] md:h-[800px] overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "embla h-full",
@@ -520,9 +520,9 @@ function HeroCarousel({ slides, service }) {
                                     columnNumber: 33
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     src: slide.bgImage,
-                                    alt: "",
+                                    alt: "blur",
                                     fill: true,
-                                    className: "object-cover z-0 bg-black/50",
+                                    className: "object-bottom z-0 bg-black/50",
                                     priority: index === 0
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/HeroCarrousel.tsx",
@@ -901,7 +901,7 @@ function TestimonialsCarousel({ service }) {
                                                     children: [
                                                         ...Array(5)
                                                     ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                            className: `w-5 h-5 ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`,
+                                                            className: `w-5 h-5 ${i < testimonial.rating ? 'text-primary' : 'text-gray-300'}`,
                                                             fill: "currentColor",
                                                             viewBox: "0 0 20 20",
                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {

@@ -58,7 +58,7 @@ export default function ContactPage() {
                                     <textarea
                                         rows={5}
                                         placeholder="Escribe tu mensaje aquí"
-                                        className="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary resize-none"
+                                        className="w-full p-4 rounded-lg border bg-white border-gray-300 focus:ring-2 focus:ring-primary resize-none"
                                     />
                                 </div>
 

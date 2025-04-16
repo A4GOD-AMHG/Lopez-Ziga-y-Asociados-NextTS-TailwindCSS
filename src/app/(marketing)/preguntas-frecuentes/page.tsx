@@ -6,24 +6,20 @@ import { FiChevronDown, FiChevronUp } from 'react-icons/fi'
 
 const faqItems = [
     {
-        question: "¿Cuánto tiempo toma resolver un caso legal?",
-        answer: "El tiempo varía según la complejidad del caso. Casos simples pueden resolverse en 3-6 meses, mientras que casos más complejos pueden llevar de 1 a 3 años."
+        question: "¿Cómo es nuestro proceso?",
+        answer: "Evaluación inicial gratuita del caso, nuestras asesorías tienen costo. Realizamos asesoría legal cuando no existe un proceso iniciado, para conocer las opciones legales que podemos ofrecer",
+    },
+    {
+        question: "¿Que sucede en caso que ya exista un proceso legal iniciado?",
+        answer: "En caso que exista ya un proceso legal, realizamos un diagnóstico legal de ese proceso."
     },
     {
         question: "¿Qué documentos necesito para iniciar un proceso legal?",
         answer: "Depende del tipo de caso. Generalmente necesitarás identificación oficial, documentos relacionados al caso y cualquier contrato o acuerdo previo."
     },
     {
-        question: "¿Cómo funcionan las consultas iniciales?",
-        answer: "Ofrecemos una consulta inicial de evaluación con costos moderados, deducibles de cualquier servicio contratado posteriormente. Nos permite analizar tu caso y proponer la mejor estrategia legal."
-    },
-    {
         question: "¿Cómo protegen mi confidencialidad?",
         answer: "Todos nuestros clientes están protegidos por el secreto profesional y acuerdos de confidencialidad. Utilizamos sistemas seguros para manejar documentación sensible."
-    },
-    {
-        question: "¿Trabajan con casos internacionales?",
-        answer: "Sí, tenemos experiencia en derecho internacional y colaboramos con una red de despachos en diferentes países para casos transfronterizos."
     },
     {
         question: "¿Qué sucede si pierdo un caso?",
@@ -49,10 +45,9 @@ export default function FAQPage() {
                                     : 'border-gray-200 hover:border-primary/30'
                                     }`}
                             >
-                                <motion.button
+                                <button
                                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
                                     className="w-full flex justify-between items-center p-6 cursor-pointer"
-                                    whileHover={{ scale: 1.02 }}
                                 >
                                     <h3 className="text-xl font-semibold text-left text-gray-800">
                                         {item.question}
@@ -64,7 +59,7 @@ export default function FAQPage() {
                                             <FiChevronDown className="text-2xl text-primary" />
                                         )}
                                     </div>
-                                </motion.button>
+                                </button>
 
                                 <AnimatePresence>
                                     {openIndex === index && (

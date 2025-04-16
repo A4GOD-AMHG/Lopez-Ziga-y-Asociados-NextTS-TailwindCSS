@@ -14,7 +14,7 @@ const AnimatedLink = ({ href, children, onClick, showUnderline = true, extraClas
     const isActive = pathname === href;
 
     return (
-        <Link href={href} className={`relative group text-lg font-medium  ${extraClasses}`} onClick={onClick}>
+        <Link href={href} className={`relative group text-xl font-medium  ${extraClasses}`} onClick={onClick}>
             <span
                 className={`${isActive ? "text-gray-900" : "text-gray-700 group-hover:text-gray-900"}`}
             >

@@ -326,7 +326,7 @@ function ServiceDetails({ title, description, benefits, process }) {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-xl font-semibold text-[#90c67b] mb-4",
+                                        className: "text-xl font-semibold text-[#70ac60] mb-4",
                                         children: "Beneficios"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/ServiceDetails.tsx",
@@ -386,7 +386,7 @@ function ServiceDetails({ title, description, benefits, process }) {
                             process && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-xl font-semibold text-[#90c67b] mb-4",
+                                        className: "text-xl font-semibold text-[#70ac60] mb-4",
                                         children: "Nuestro Proceso"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/ServiceDetails.tsx",
@@ -509,28 +509,28 @@ const slides = [
     {
         title: "Defensa Penal Especializada en México",
         description: "Expertos en procesos judiciales complejos: desde delitos menores hasta casos de alta repercusión mediática. Protección legal integral con estrategias personalizadas.",
-        ctaText: "Agenda tu Consulta",
+        ctaText: "Agenda tu Consulta (1500)",
         bgImage: "/images/penal-bg1.jpg",
-        price: 5000
+        price: 1500
     },
     {
         title: "Juicios Orales con Resultados Comprobados",
         description: "Representación experta en el nuevo sistema de justicia penal. Más de 200 casos resueltos exitosamente en los últimos 3 años.",
-        ctaText: "Agenda tu Consulta",
+        ctaText: "Agenda tu Consulta (1500)",
         bgImage: "/images/penal-bg2.jpg",
-        price: 4000
+        price: 1500
     },
     {
         title: "Defensa en Delitos Federales",
-        description: "Especialistas en derecho penal federal: narcotráfico, lavado de dinero, delitos fiscales y delincuencia organizada.",
-        ctaText: "Agenda tu Consulta",
+        description: "Especialistas en derechos penales y federales",
+        ctaText: "Agenda tu Consulta (1500)",
         bgImage: "/images/penal-bg3.jpg",
-        price: 6000
+        price: 1500
     }
 ];
 const serviceDetails = {
     title: "Derecho Penal",
-    description: "Nuestro equipo de abogados penalistas cuenta con amplia experiencia en la defensa de casos complejos dentro del sistema de justicia penal mexicano, garantizando una defensa técnica sólida y estrategias legales personalizadas.",
+    description: "Con precios de 1500 las asesorías. Nuestro equipo de abogados penalistas cuenta con amplia experiencia en la defensa de casos complejos dentro del sistema de justicia penal mexicano, garantizando una defensa técnica sólida y estrategias legales personalizadas.",
     benefits: [
         "Defensa en todas las etapas del proceso penal",
         "Asesoría especializada en juicios orales",

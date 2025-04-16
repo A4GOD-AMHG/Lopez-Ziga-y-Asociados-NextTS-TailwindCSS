@@ -13,29 +13,29 @@ const slides = [
     {
         title: "Protección Legal para Transacciones Inmobiliarias",
         description: "Asesoría integral en compraventa, arrendamiento y desarrollo de propiedades. Garantía legal en todas las etapas de su inversión.",
-        ctaText: "Agenda tu consulta",
+        ctaText: "Agenda tu consulta (1500)",
         bgImage: "/images/inmobiliario-bg1.jpg",
-        price: 8000,
+        price: 1500,
     },
     {
         title: "Soluciones en Conflictos de Propiedad",
-        description: "Defensa legal especializada en litigios de titularidad, desalojos y controversias contractuales. Más de 150 casos resueltos exitosamente.",
-        ctaText: "Agenda tu consulta",
+        description: "Defensa legal especializada en litigios de titularidad, desalojos y pólizas jurídicas de arrendamiento.",
+        ctaText: "Agenda tu consulta (1500)",
         bgImage: "/images/inmobiliario-bg2.jpg",
-        price: 7500,
+        price: 1500,
     },
     {
         title: "Asesoría en Desarrollo Inmobiliario",
         description: "Gestión legal completa para proyectos de construcción: permisos, contratos con proveedores y cumplimiento normativo.",
-        ctaText: "Agenda tu consulta",
+        ctaText: "Agenda tu consulta (1500)",
         bgImage: "/images/inmobiliario-bg3.jpg",
-        price: 10000,
+        price: 1500,
     }
 ]
 
 const serviceDetails = {
     title: "Derecho Inmobiliario",
-    description: "Brindamos protección legal integral para transacciones y conflictos relacionados con bienes raíces, garantizando seguridad jurídica en todos los procesos.",
+    description: "Con precios de 1500 las asesorías. Brindamos protección legal integral para transacciones y conflictos relacionados con bienes raíces, garantizando seguridad jurídica en todos los procesos.",
     benefits: [
         "Revisión y elaboración de contratos",
         "Registro de propiedades",

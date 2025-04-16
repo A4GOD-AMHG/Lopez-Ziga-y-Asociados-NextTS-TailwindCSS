@@ -51,7 +51,7 @@ export default function HeroCarousel({ slides, service }: { slides: Slide[], ser
     }, [emblaApi, onSelect, scrollNext, selectedIndex, isVideoPlaying])
 
     return (
-        <div className="relative h-[600px] md:h-[700px] overflow-hidden">
+        <div className="relative h-[600px] md:h-[800px] overflow-hidden">
             <div className="embla h-full" ref={emblaRef}>
                 <div className="embla__container h-full flex">
                     {slides.map((slide, index) => (
@@ -70,9 +70,9 @@ export default function HeroCarousel({ slides, service }: { slides: Slide[], ser
                             ) : (
                                 <Image
                                     src={slide.bgImage}
-                                    alt=""
+                                    alt="blur"
                                     fill
-                                    className="object-cover z-0 bg-black/50"
+                                    className="object-bottom z-0 bg-black/50"
                                     priority={index === 0}
                                 />
                             )}

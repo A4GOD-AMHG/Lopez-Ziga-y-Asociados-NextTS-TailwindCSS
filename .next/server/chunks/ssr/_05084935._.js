@@ -326,7 +326,7 @@ function ServiceDetails({ title, description, benefits, process }) {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-xl font-semibold text-[#90c67b] mb-4",
+                                        className: "text-xl font-semibold text-[#70ac60] mb-4",
                                         children: "Beneficios"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/ServiceDetails.tsx",
@@ -386,7 +386,7 @@ function ServiceDetails({ title, description, benefits, process }) {
                             process && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-xl font-semibold text-[#90c67b] mb-4",
+                                        className: "text-xl font-semibold text-[#70ac60] mb-4",
                                         children: "Nuestro Proceso"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/ServiceDetails.tsx",
@@ -509,28 +509,28 @@ const slides = [
     {
         title: "Protección Legal para Transacciones Inmobiliarias",
         description: "Asesoría integral en compraventa, arrendamiento y desarrollo de propiedades. Garantía legal en todas las etapas de su inversión.",
-        ctaText: "Agenda tu consulta",
+        ctaText: "Agenda tu consulta (1500)",
         bgImage: "/images/inmobiliario-bg1.jpg",
-        price: 8000
+        price: 1500
     },
     {
         title: "Soluciones en Conflictos de Propiedad",
-        description: "Defensa legal especializada en litigios de titularidad, desalojos y controversias contractuales. Más de 150 casos resueltos exitosamente.",
-        ctaText: "Agenda tu consulta",
+        description: "Defensa legal especializada en litigios de titularidad, desalojos y pólizas jurídicas de arrendamiento.",
+        ctaText: "Agenda tu consulta (1500)",
         bgImage: "/images/inmobiliario-bg2.jpg",
-        price: 7500
+        price: 1500
     },
     {
         title: "Asesoría en Desarrollo Inmobiliario",
         description: "Gestión legal completa para proyectos de construcción: permisos, contratos con proveedores y cumplimiento normativo.",
-        ctaText: "Agenda tu consulta",
+        ctaText: "Agenda tu consulta (1500)",
         bgImage: "/images/inmobiliario-bg3.jpg",
-        price: 10000
+        price: 1500
     }
 ];
 const serviceDetails = {
     title: "Derecho Inmobiliario",
-    description: "Brindamos protección legal integral para transacciones y conflictos relacionados con bienes raíces, garantizando seguridad jurídica en todos los procesos.",
+    description: "Con precios de 1500 las asesorías. Brindamos protección legal integral para transacciones y conflictos relacionados con bienes raíces, garantizando seguridad jurídica en todos los procesos.",
     benefits: [
         "Revisión y elaboración de contratos",
         "Registro de propiedades",
