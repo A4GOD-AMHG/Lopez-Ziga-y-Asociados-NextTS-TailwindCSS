@@ -1,21 +1,30 @@
-'use client'
-
-import { motion } from 'framer-motion'
-import HeroSection from '@/app/components/Sections/HeroSection'
+import HeroContent from '@/app/components/HeroContent'
 import ServicesSection from '@/app/components/Sections/ServicesSection'
 import StatsSection from '@/app/components/Sections/StatsSection'
 import TeamSection from '@/app/components/Sections/TeamSection'
 import TestimonialsSection from '@/app/components/Sections/TestimonialsSection'
+import Image from 'next/image'
 
-export default function HomePage() {
+export default async function HomePage() {
     return (
         <main className="relative">
-            <HeroSection />
+            <section className="relative h-[50vh] mt-24 sm:h-[70vh] flex items-center justify-center overflow-hidden">
+                <Image
+                    alt='bg'
+                    placeholder='blur'
+
+                    src="/images/law-bg.jpg"
+                    blurDataURL='/images/law-bg.jpg'
+                    fill
+                />
+                <div className="parallax-overlay" />
+                <div className="container mx-auto px-4 relative z-10">
+                    <HeroContent />
+                </div>
+
+            </section>
             <ServicesSection />
-            <motion.section
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
+            <section
                 className="py-20 bg-gray-50"
             >
                 <div className="container mx-auto px-4">
@@ -49,7 +58,7 @@ export default function HomePage() {
                         </div>
                     </div>
                 </div>
-            </motion.section>
+            </section>
 
             <StatsSection />
             <TeamSection />

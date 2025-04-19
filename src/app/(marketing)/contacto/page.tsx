@@ -1,6 +1,3 @@
-'use client'
-
-import { motion } from 'framer-motion'
 import { FiMapPin } from 'react-icons/fi'
 import dynamic from 'next/dynamic'
 
@@ -9,7 +6,7 @@ const Map = dynamic(() => import('@/app/components/Map'), {
     loading: () => <div className="h-64 bg-gray-200 animate-pulse rounded-xl" />
 })
 
-export default function ContactPage() {
+export default async function ContactPage() {
     return (
         <main className="relative mt-16 sm:mt-24">
             <section className="py-20 bg-gray-50">
@@ -18,11 +15,7 @@ export default function ContactPage() {
                         <h1 className="text-5xl font-bold text-primary mb-12 text-center">Contáctanos</h1>
 
                         <div className="flex flex-col lg:flex-row gap-12">
-                            <motion.form
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5 }}
+                            <form
                                 className="w-full lg:max-w-xl mx-auto space-y-6"
                             >
                                 <div>
@@ -65,13 +58,9 @@ export default function ContactPage() {
                                 <button className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-secondary transition-colors w-full">
                                     Enviar Mensaje
                                 </button>
-                            </motion.form>
+                            </form>
 
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: 0.2 }}
+                            <div
                                 className="w-full lg:max-w-2xl"
                             >
                                 <div className="bg-white p-8 rounded-xl shadow-md">
@@ -107,7 +96,7 @@ export default function ContactPage() {
                                         </div>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </div>
                         </div>
                     </div>
                 </div>

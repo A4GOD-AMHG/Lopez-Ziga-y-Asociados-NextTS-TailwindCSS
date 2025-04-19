@@ -2,55 +2,69 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiX, FiCheckCircle, FiAlertCircle } from 'react-icons/fi'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useTransition } from 'react'
+import { createConsultation } from '@/app/actions'
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 
 interface ConsultationModalProps {
-    isOpen: boolean;
-    onClose: () => void;
-    service?: string;
+    isOpen: boolean
+    onClose: () => void
+    service?: string
 }
 
+type FormStatus = 'idle' | 'success' | 'error'
+
 export default function ConsultationModal({ isOpen, onClose, service }: ConsultationModalProps) {
-    const [isSubmitting, setIsSubmitting] = useState(false)
-    const [formStatus, setFormStatus] = useState<'idle' | 'success' | 'error'>('idle')
-    const [email, setEmail] = useState('')
-    const [phone, setPhone] = useState('')
+    const [isPending, startTransition] = useTransition()
+    const [formStatus, setFormStatus] = useState<FormStatus>('idle')
+    const [email, setEmail] = useState<string>('')
+    const [appointmentDate, setAppointmentDate] = useState<Date | null>(null)
+    const [phone, setPhone] = useState<string>('')
     const [submittedEmails, setSubmittedEmails] = useState<string[]>([])
 
     useEffect(() => {
         if (isOpen) {
             setFormStatus('idle')
-            setIsSubmitting(false)
             setEmail('')
+            setPhone('')
         }
     }, [isOpen])
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        setIsSubmitting(true)
+        const formData = new FormData(e.currentTarget)
 
-        if (submittedEmails.includes(email)) {
-            setFormStatus('error')
-            setIsSubmitting(false)
-            return
-        }
+        startTransition(async () => {
+            try {
+                const result = await createConsultation(formData)
 
-        try {
-            setSubmittedEmails(prev => [...prev, email])
-            setFormStatus('success')
-            setTimeout(() => {
-                onClose()
-            }, 2000)
-        } catch (error) {
-            setFormStatus('error')
-        } finally {
-            setIsSubmitting(false)
-        }
+                if (result.success) {
+                    setSubmittedEmails(prev => [...prev, email])
+                    setFormStatus('success')
+                    setTimeout(onClose, 2000)
+                } else {
+                    setFormStatus('error')
+                }
+            } catch (error) {
+                setFormStatus('error')
+            }
+        })
     }
 
     const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const value = e.target.value.replace(/\D/g, '')
+        const value = e.target.value
+            .replace(/[^\d+]/g, '')
+            .replace(/(\+.*?)\+/, '$1')
+
         setPhone(value)
+    }
+
+    const formatPhoneNumber = (phone: string) => {
+        if (phone.startsWith('+')) {
+            return phone.replace(/(\+\d{2})(\d{3})(\d{3})(\d{3})/, '$1 $2 $3 $4')
+        }
+        return phone.replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 $2 $3 $4')
     }
 
     return (
@@ -100,6 +114,7 @@ export default function ConsultationModal({ isOpen, onClose, service }: Consulta
                                         <label className="block text-gray-700 mb-2">Nombre completo</label>
                                         <input
                                             type="text"
+                                            name="name"
                                             required
                                             placeholder="Ingrese su nombre completo"
                                             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
@@ -111,6 +126,7 @@ export default function ConsultationModal({ isOpen, onClose, service }: Consulta
                                             <label className="block text-gray-700 mb-2">Correo electrónico</label>
                                             <input
                                                 type="email"
+                                                name="email"
                                                 required
                                                 placeholder="Ingrese su correo electrónico"
                                                 value={email}
@@ -122,30 +138,53 @@ export default function ConsultationModal({ isOpen, onClose, service }: Consulta
                                             <label className="block text-gray-700 mb-2">Teléfono</label>
                                             <input
                                                 type="tel"
+                                                name="phone"
                                                 required
                                                 placeholder="Ingrese su número de teléfono"
-                                                value={phone}
+                                                value={formatPhoneNumber(phone)}
                                                 onChange={handlePhoneChange}
                                                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                                             />
                                         </div>
                                     </div>
 
-                                    {!service ? <div>
-                                        <label htmlFor="area-consulta" className="block text-gray-700 mb-2">Área de consulta</label>
-                                        <select
-                                            id="area-consulta"
-                                            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-                                        >
-                                            <option >Derecho Penal (1500)</option>
-                                            <option >Derecho Familiar (1000)</option>
-                                            <option >Derecho Inmobiliario (1500)</option>
-                                        </select>
-                                    </div> : <div>Consulta de {service}</div>}
+                                    {!service ? (
+                                        <div>
+                                            <label htmlFor="area-consulta" className="block text-gray-700 mb-2">
+                                                Área de consulta
+                                            </label>
+                                            <select
+                                                id="area-consulta"
+                                                name="service"
+                                                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                                            >
+                                                <option value="Derecho Penal">Derecho Penal ($1500)</option>
+                                                <option value="Derecho Familiar">Derecho Familiar ($1000)</option>
+                                                <option value="Derecho Inmobiliario">Derecho Inmobiliario ($1500)</option>
+                                            </select>
+                                        </div>
+                                    ) : (
+                                        <input type="hidden" name="service" value={service} />
+                                    )}
 
+                                    <div>
+                                        <label className="block text-gray-700 mb-2">Fecha de consulta</label>
+                                        <DatePicker
+                                            required
+                                            name="appointmentDate"
+                                            minDate={new Date()}
+                                            filterDate={(date) => date.getDay() !== 0 && date.getDay() !== 6}
+                                            selected={appointmentDate}
+                                            onChange={(date) => setAppointmentDate(date)}
+                                            dateFormat="dd/MM/yyyy"
+                                            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                                            placeholderText="Selecciona una fecha"
+                                        />
+                                    </div>
                                     <div>
                                         <label className="block text-gray-700 mb-2">Descripción breve</label>
                                         <textarea
+                                            name="description"
                                             rows={4}
                                             placeholder="Ingrese una descripción breve"
                                             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors resize-none"
@@ -159,10 +198,10 @@ export default function ConsultationModal({ isOpen, onClose, service }: Consulta
 
                                     <button
                                         type="submit"
-                                        disabled={isSubmitting}
+                                        disabled={isPending}
                                         className="w-full bg-primary text-white p-3 rounded-lg hover:bg-secondary transition-colors disabled:opacity-70"
                                     >
-                                        {isSubmitting ? 'Enviando...' : 'Agendar Consulta'}
+                                        {isPending ? 'Enviando...' : 'Agendar Consulta'}
                                     </button>
                                 </form>
                             )}

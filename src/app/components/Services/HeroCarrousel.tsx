@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 // import PaymentModal from './PaymentsModal'
-import ConsultationModal from './Modals/ConsultationModal'
+import ConsultationModal from '../Consultations/ConsultationModal'
 
 type Slide = {
     title: string

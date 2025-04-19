@@ -1,6 +1,3 @@
-'use client'
-
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { FiBriefcase, FiHome, FiUsers, FiArrowRight } from 'react-icons/fi'
 
@@ -25,39 +22,32 @@ const services = [
     }
 ]
 
-export default function ServicesSection() {
+export default async function ServicesSection() {
     return (
         <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-4">
-                <motion.h2
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
+                <h2
                     className="text-4xl md:text-5xl font-bold text-center text-primary mb-16"
                 >
                     Servicios Jurídicos Especializados
-                </motion.h2>
+                </h2>
 
                 <div className="grid md:grid-cols-3 gap-8">
-                    {services.map((service, index) => (
-                        <motion.div
+                    {services.map((service, _) => (
+                        <Link href={service.href}
                             key={service.title}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                            className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow"
+
+                            className="bg-white cursor-pointer p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow"
                         >
                             <div className="text-center">
                                 <div className="inline-block">{service.icon}</div>
                                 <h3 className="text-3xl md:text-3xl font-bold mb-4">{service.title}</h3>
                                 <p className="text-gray-600 mb-6 text-xl">{service.description}</p>
-                                <Link href={service.href} className="text-primary font-semibold cursor-pointer hover:underline flex items-center justify-center gap-2 mx-auto">
-                                    Ver detalles
-                                    <FiArrowRight className="text-xl" />
-                                </Link>
+                                <span className="text-primary text-lg font-semibold cursor-pointer flex items-center justify-center gap-2 mx-auto">
+                                    Click para ver más
+                                </span>
                             </div>
-                        </motion.div>
+                        </Link>
                     ))}
                 </div>
             </div>

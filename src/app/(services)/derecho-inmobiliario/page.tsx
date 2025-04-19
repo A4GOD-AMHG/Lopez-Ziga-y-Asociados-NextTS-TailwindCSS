@@ -1,5 +1,5 @@
-import FeaturedAttorneys from '@/app/components/FeaturedAttorneys'
-import HeroCarousel from '@/app/components/HeroCarrousel'
+import FeaturedAttorneys from '@/app/components/Services/FeaturedAttorneys'
+import HeroCarousel from '@/app/components/Services/HeroCarrousel'
 import ServiceDetails from '@/app/components/ServiceDetails'
 import TestimonialsCarousel from '@/app/components/TestimonialsCarrousel'
 
@@ -73,7 +73,7 @@ const attorneys = [
     }
 ]
 
-export default function DerechoInmobiliario() {
+export default async function DerechoInmobiliario() {
     return (
         <main className="min-h-screen mt-16 sm:mt-24 flex flex-col">
             <HeroCarousel slides={slides} service='Derecho Inmobiliario' />

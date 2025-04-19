@@ -1,17 +1,11 @@
-'use client'
-
-import { motion } from 'framer-motion'
 import TeamSection from '@/app/components/Sections/TeamSection'
 
-export default function AboutPage() {
+export default async function AboutPage() {
     return (
         <main className="relative mt-16 sm:mt-24">
             <section className="py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
+                    <div
                         className="max-w-6xl mx-auto text-center"
                     >
                         <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-12">Nuestra Historia</h1>
@@ -35,7 +29,7 @@ export default function AboutPage() {
                                 </p>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </section>
 

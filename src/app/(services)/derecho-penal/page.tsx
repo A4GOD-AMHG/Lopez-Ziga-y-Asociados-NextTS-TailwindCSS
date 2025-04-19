@@ -1,10 +1,8 @@
 
-import FeaturedAttorneys from '@/app/components/FeaturedAttorneys'
-import HeroCarousel from '@/app/components/HeroCarrousel'
+import FeaturedAttorneys from '@/app/components/Services/FeaturedAttorneys'
+import HeroCarousel from '@/app/components/Services/HeroCarrousel'
 import ServiceDetails from '@/app/components/ServiceDetails'
 import TestimonialsCarousel from '@/app/components/TestimonialsCarrousel'
-
-
 
 export const metadata = {
     title: 'Defensa Penal Especializada | López Ziga y Asociados',
@@ -84,7 +82,7 @@ const attorneys = [
     }
 ]
 
-export default function DerechoPenal() {
+export default async function DerechoPenal() {
     return (
         <main className="min-h-screen mt-16 sm:mt-24 flex flex-col">
             <HeroCarousel
