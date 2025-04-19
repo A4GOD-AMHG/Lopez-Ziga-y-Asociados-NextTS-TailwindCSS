@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
-    {"offset": {"line": 60, "column": 0}, "map": {"version":3,"sources":["file:///home/a4god-/Projects/Github/Lopez-Ziga-y-Asociados-NextTS-TailwindCSS/src/app/api/newsletter/route.ts"],"sourcesContent":["import { NextResponse } from 'next/server';\n// import { Resend } from 'resend';\n\n// const resend = new Resend(process.env.RESEND_API_KEY);\n\nexport async function POST(request: Request) {\n    const { email } = await request.json();\n\n    try {\n        // await resend.contacts.create({\n        //     email,\n        //     audienceId: process.env.RESEND_AUDIENCE_ID!,\n        // });\n        console.log(email)\n        return NextResponse.json({ success: true });\n    } catch (error) {\n        return NextResponse.json(\n            { error: 'Error al procesar la suscripción' },\n            { status: 500 }\n        );\n    }\n}"],"names":[],"mappings":";;;AAAA;;AAKO,eAAe,KAAK,OAAgB;IACvC,MAAM,EAAE,KAAK,EAAE,GAAG,MAAM,QAAQ,IAAI;IAEpC,IAAI;QACA,iCAAiC;QACjC,aAAa;QACb,mDAAmD;QACnD,MAAM;QACN,QAAQ,GAAG,CAAC;QACZ,OAAO,gIAAA,CAAA,eAAY,CAAC,IAAI,CAAC;YAAE,SAAS;QAAK;IAC7C,EAAE,OAAO,OAAO;QACZ,OAAO,gIAAA,CAAA,eAAY,CAAC,IAAI,CACpB;YAAE,OAAO;QAAmC,GAC5C;YAAE,QAAQ;QAAI;IAEtB;AACJ","debugId":null}}]
-}

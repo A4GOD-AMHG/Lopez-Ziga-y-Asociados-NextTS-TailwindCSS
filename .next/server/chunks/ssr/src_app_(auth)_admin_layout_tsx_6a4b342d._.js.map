@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/a4god-/Projects/Github/Lopez-Ziga-y-Asociados-NextTS-TailwindCSS/src/app/%28auth%29/admin/layout.tsx"],"sourcesContent":["import { cookies } from 'next/headers'\nimport { redirect } from 'next/navigation'\n\nexport default async function AdminLayout({ children }: { children: React.ReactNode }) {\n    const cookieStore = await cookies();\n    if (!cookieStore.get('admin-authenticated')?.value) {\n        redirect('/admin/login')\n    }\n\n    return <>{children}</>\n}"],"names":[],"mappings":";;;;AAAA;AACA;AAAA;;;;AAEe,eAAe,YAAY,EAAE,QAAQ,EAAiC;IACjF,MAAM,cAAc,MAAM,CAAA,GAAA,+HAAA,CAAA,UAAO,AAAD;IAChC,IAAI,CAAC,YAAY,GAAG,CAAC,wBAAwB,OAAO;QAChD,CAAA,GAAA,qLAAA,CAAA,WAAQ,AAAD,EAAE;IACb;IAEA,qBAAO;kBAAG;;AACd","debugId":null}}]
-}
