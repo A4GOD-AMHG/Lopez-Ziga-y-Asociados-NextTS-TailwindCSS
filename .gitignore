@@ -3,3 +3,4 @@
 /out
 next
 .env
+src/lib/firebase-admin.json

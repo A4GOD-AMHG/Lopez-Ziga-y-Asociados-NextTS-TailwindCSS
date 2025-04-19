@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import 'leaflet/dist/leaflet.css';
 
+@plugin "tailwindcss-motion";
+
 @theme {
   --color-primary: #70ac60;
   --color-secondary: #90c67b;
@@ -47,22 +49,6 @@
   animation: fade-in 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.parallax-bg {
-  background: url('/images/law-bg.jpg') center/cover fixed;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-@media (max-width: 768px) {
-  .parallax-bg {
-    background-attachment: scroll;
-  }
-}
-
 .parallax-overlay {
   position: absolute;
   top: 0;
@@ -81,4 +67,27 @@
 
 .leaflet-control-attribution {
   font-size: 0.7rem !important;
+}
+
+.react-datepicker {
+  font-family: inherit;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 0.5rem !important;
+}
+
+.react-datepicker__header {
+  background-color: #f3f4f6 !important;
+}
+
+.react-datepicker__day--disabled {
+  color: #d1d5db !important;
+  cursor: not-allowed !important;
+}
+
+.react-datepicker__day--selected {
+  background-color: #3B82F6 !important;
+}
+
+.striped-row:nth-child(even) {
+  background-color: #f9fafb;
 }
