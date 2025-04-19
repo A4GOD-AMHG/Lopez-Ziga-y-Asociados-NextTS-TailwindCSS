@@ -45,31 +45,43 @@ async function sendStatusEmail(email: string, status: 'approved' | 'rejected', d
         console.error('Error enviando email:', error)
     }
 }
-
 export async function updateConsultationStatus(id: string, status: 'approved' | 'rejected', date?: string) {
     try {
+        console.log(`Actualizando estado a ${status} para consulta ${id}`)
+
+        const updateData: any = { status }
+        if (date) {
+            updateData.appointmentDate = date
+            console.log(`Fecha asignada: ${date}`)
+        }
+
         const docRef = adminDb.collection('consultations').doc(id)
-        await docRef.update({
-            status,
-            ...(date && { appointmentDate: date })
-        })
+        await docRef.update(updateData)
 
         const doc = await docRef.get()
         const email = doc.data()?.email
 
         if (email) {
+            console.log(`Enviando email a ${email}`)
             await sendStatusEmail(email, status, date)
         }
 
         return { success: true }
     } catch (error) {
+        console.error(`Error actualizando estado: ${error}`)
         return { success: false, error: 'Error actualizando estado' }
     }
 }
 
 export async function logout() {
-    (await cookies()).delete('admin-authenticated')
-    redirect('/')
+    try {
+        (await cookies()).delete('admin-authenticated')
+
+        redirect('/')
+    } catch (error) {
+        console.error('Error al cerrar sesión:', error)
+        redirect('/admin')
+    }
 }
 
 export async function createConsultation(formData: FormData) {
