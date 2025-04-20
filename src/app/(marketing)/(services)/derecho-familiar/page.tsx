@@ -73,7 +73,7 @@ export default async function DerechoFamiliar() {
             <HeroCarrousel slides={slides} service='Derecho Familiar' />
             <ServiceDetails {...serviceDetails} />
             <FeaturedAttorneys attorneys={attorneys} />
-            <TestimonialsCarousel service="familiar" />
+            <TestimonialsCarousel />
         </main>
     )
 }

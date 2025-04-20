@@ -85,7 +85,7 @@ export default async function DerechoPenal() {
             />
             <ServiceDetails {...serviceDetails} />
             <FeaturedAttorneys attorneys={attorneys} />
-            <TestimonialsCarousel service="penal" />
+            <TestimonialsCarousel />
         </main>
     )
 }

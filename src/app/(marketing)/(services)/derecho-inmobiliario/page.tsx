@@ -73,7 +73,7 @@ export default async function DerechoInmobiliario() {
             <HeroCarrousel slides={slides} service='Derecho Inmobiliario' />
             <ServiceDetails {...serviceDetails} />
             <FeaturedAttorneys attorneys={attorneys} />
-            <TestimonialsCarousel service="inmobiliario" />
+            <TestimonialsCarousel />
         </main>
     )
 }

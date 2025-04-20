@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 type ServiceDetailsProps = {
     title: string
@@ -7,7 +7,7 @@ type ServiceDetailsProps = {
     process?: string[]
 }
 
-export default function ServiceDetails({ title, description, benefits, process }: ServiceDetailsProps) {
+export default async function ServiceDetails({ title, description, benefits, process }: ServiceDetailsProps) {
     return (
         <section className="py-16 bg-white">
             <div className="container mx-auto px-4">

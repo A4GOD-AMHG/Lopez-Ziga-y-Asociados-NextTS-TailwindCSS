@@ -1,11 +1,11 @@
 'use client'
 
-import useEmblaCarousel from 'embla-carousel-react'
-import { testimonialsByService } from '@/lib/testimonials'
-import Image from 'next/image'
-import { useCallback, useEffect, useState } from 'react'
+import { testimonials, testimonialsList } from '@/lib/testimonials';
+import useEmblaCarousel from 'embla-carousel-react';
+import Image from 'next/image';
+import { useCallback, useEffect, useState } from 'react';
 
-export default function TestimonialsCarousel({ service }: { service: string }) {
+export default function TestimonialsCarousel() {
     const [emblaRef, emblaApi] = useEmblaCarousel({
         loop: true,
         align: 'center',
@@ -13,7 +13,7 @@ export default function TestimonialsCarousel({ service }: { service: string }) {
     })
 
     const [selectedIndex, setSelectedIndex] = useState(0)
-    const testimonials = testimonialsByService[service as keyof typeof testimonialsByService] || []
+    const testList: testimonialsList = testimonials
 
     const scrollNext = useCallback(() => {
         if (emblaApi) emblaApi.scrollNext()
@@ -49,7 +49,7 @@ export default function TestimonialsCarousel({ service }: { service: string }) {
                 <div className="relative max-w-3xl mx-auto">
                     <div className="embla overflow-hidden" ref={emblaRef}>
                         <div className="embla__container flex">
-                            {testimonials.map((testimonial, index) => (
+                            {testList.map((testimonial, index) => (
                                 <div
                                     className="embla__slide flex-[0_0_100%] px-4"
                                     key={index}
