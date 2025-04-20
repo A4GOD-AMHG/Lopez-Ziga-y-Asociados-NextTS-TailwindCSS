@@ -1,35 +1,32 @@
-import FeaturedAttorneys from '@/app/components/Services/FeaturedAttorneys'
-import HeroCarousel from '@/app/components/Services/HeroCarrousel'
-import ServiceDetails from '@/app/components/ServiceDetails'
-import TestimonialsCarousel from '@/app/components/TestimonialsCarrousel'
+import FeaturedAttorneys from '@/app/components/Services/FeaturedAttorneys';
+import ServiceDetails from '@/app/components/ServiceDetails';
+import TestimonialsCarousel from '@/app/components/TestimonialsCarrousel';
+import dynamic from 'next/dynamic';
 
 export const metadata = {
-    title: 'Derecho Familiar Integral | López Ziga y Asociados',
+    title: 'Derecho Familiar | López Ziga y Asociados',
     description: 'Soluciones legales en divorcios, custodia y sucesiones. Enfoque humano y profesional en casos familiares.',
-    keywords: ['abogados de familia', 'divorcio incausado', 'custodia de menores', 'sucesiones testamentarias'],
+    keywords: ['abogados de familia', 'divorcio', 'custodia de menores', 'testamentos'],
 }
 
 const slides = [
     {
         title: "Soluciones Legales para Familias",
         description: "Manejo sensible de casos de divorcio, custodia y pensión alimenticia. Protección de derechos familiares con enfoque humano.",
-        ctaText: "Agenda tu consulta (1000)",
+        ctaText: "Agenda tu consulta",
         bgImage: "/images/familiar-bg1.jpg",
-        price: 1000,
     },
     {
         title: "Gestión de Sucesiones y Herencias",
         description: "Asesoría especializada en testamentos, sucesiones intestadas y división de bienes familiares.",
-        ctaText: "Agenda tu consulta (1000)",
+        ctaText: "Agenda tu consulta",
         bgImage: "/images/familiar-bg2.jpg",
-        price: 1000,
     },
     {
         title: "Protección de Menores, acuerdos de guardia y convivencia",
         description: "Defensa legal especializada en convenios de guardia y custodia, patria potestad, así como régimen de visitas. Respeto total al interés superior del menor.",
-        ctaText: "Agenda tu consulta (1000)",
+        ctaText: "Agenda tu consulta",
         bgImage: "/images/familiar-bg3.jpg",
-        price: 1000,
     }
 ]
 
@@ -56,27 +53,24 @@ const serviceDetails = {
 
 const attorneys = [
     {
-        name: "Dra. Laura Sánchez",
-        title: "Especialista en Divorcios",
-        experience: "9 años",
-        cases: "180+",
-        email: "l.sanchez@lopezziga.com",
-        photo: "/images/lawyer2.jpg"
-    },
-    {
-        name: "Lic. Diego Morales",
-        title: "Experto en Sucesiones",
-        experience: "7 años",
-        cases: "95+",
-        email: "d.morales@lopezziga.com",
+        name: "Lic. Alejandro Torres",
+        title: "Especialista en Derecho Penal",
+        experience: "15 años",
+        cases: "450+",
+        email: "a.torres@lopezziga.com",
         photo: "/images/lawyer1.jpg"
-    }
+    },
 ]
+
+const HeroCarrousel = dynamic(
+    () => import('@/app/components/Services/HeroCarrousel'),
+    { ssr: false, }
+);
 
 export default async function DerechoFamiliar() {
     return (
         <main className="min-h-screen mt-16 sm:mt-24 flex flex-col">
-            <HeroCarousel slides={slides} service='Derecho Familiar' />
+            <HeroCarrousel slides={slides} service='Derecho Familiar' />
             <ServiceDetails {...serviceDetails} />
             <FeaturedAttorneys attorneys={attorneys} />
             <TestimonialsCarousel service="familiar" />

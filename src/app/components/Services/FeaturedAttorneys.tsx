@@ -19,14 +19,17 @@ export default function FeaturedAttorneys({ attorneys }: { attorneys: Attorney[]
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     {attorneys.map((attorney, index) => (
-                        <div key={index} className="bg-[#f8f8f8] rounded-lg shadow-md overflow-hidden">
+                        <div key={index} className="bg-[#f8f8f8] px-10 sm:px-0 rounded-lg shadow-md overflow-hidden">
                             <div className="flex flex-col md:flex-row">
                                 <div className="w-full md:w-1/3 relative h-64 md:h-auto">
                                     <Image
                                         src={attorney.photo}
                                         alt={attorney.name}
+                                        placeholder='blur'
+                                        priority
+                                        blurDataURL={attorney.photo}
                                         fill
-                                        className="object-cover"
+                                        className="object-fill"
                                     />
                                 </div>
 
