@@ -2,7 +2,7 @@
 
 import { FiArrowRight } from 'react-icons/fi'
 import { useState } from 'react'
-import ConsultationModal from './Consultations/ConsultationModal'
+// import ConsultationModal from './Consultations/ConsultationModal'
 
 export default function HeroContent() {
     const [isModalOpen, setIsModalOpen] = useState(false)
@@ -27,7 +27,7 @@ export default function HeroContent() {
                 </button>
             </div>
 
-            <ConsultationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+            {/* <ConsultationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} /> */}
         </>
     )
 }

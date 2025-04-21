@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { FiBriefcase, FiHome, FiUsers, FiArrowRight } from 'react-icons/fi'
+import Link from 'next/link';
+import { FiBriefcase, FiHome, FiUsers } from 'react-icons/fi';
 
 const services = [
     {

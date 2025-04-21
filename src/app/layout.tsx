@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     default: 'López Ziga y Asociados',
     template: '%s | López Ziga y Asociados'
   },
-  description: 'Con más de 20 años de experiencia y siete años en nuestro actual Despacho Jurídico, Nos Especializado en Derecho Familiar y Derecho Penal, Asociado con Firmas de Abogados Especialistas en Derecho Civil, Derecho Agrario y Derecho Mercantil. Realizamos Amparos Penales, Defensa de los Derechos de los Menores de edad, Defensa de los Derechos de Adultos Mayores, Recuperación de Inmuebles, Regularización de Inmuebles,',
+  description: 'Con más de 20 años de experiencia y siete años en nuestro actual Despacho Jurídico, nos especializamos en Derecho Penal, Familiar e Inmobiliario. Nuestro equipo de abogados garantiza transparencia y acceso constante a los expedientes digitales de nuestros clientes empresariales, proporcionando un asesoramiento continuo y personalizado.',
   keywords: ['abogados México', 'derecho familiar', 'derecho penal', 'derecho inmobiliario',],
   authors: [{ name: 'Emyux', url: "https://emyux.com" }],
   robots: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: 'López Ziga y Asociados',
     url: 'https://lopezzigayasociados.com.mx/',
     description:
-      'Con más de 20 años de experiencia y siete años en nuestro actual Despacho Jurídico, Nos Especializado en Derecho Familiar y Derecho Penal, Asociado con Firmas de Abogados Especialistas en Derecho Civil, Derecho Agrario y Derecho Mercantil. Realizamos Amparos Penales, Defensa de los Derechos de los Menores de edad, Defensa de los Derechos de Adultos Mayores, Recuperación de Inmuebles, Regularización de Inmuebles,',
+      'Con más de 20 años de experiencia y siete años en nuestro actual Despacho Jurídico, nos especializamos en Derecho Penal, Familiar e Inmobiliario. Nuestro equipo de abogados garantiza transparencia y acceso constante a los expedientes digitales de nuestros clientes empresariales, proporcionando un asesoramiento continuo y personalizado.',
     images: [
       {
         url: '/images/logo.png',

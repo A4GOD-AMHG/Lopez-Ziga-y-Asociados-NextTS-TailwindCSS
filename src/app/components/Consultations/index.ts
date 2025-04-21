@@ -1,4 +1,4 @@
-import ConsultationModal from "./ConsultationModal";
-import ConsultationsTable from './ConsultationTable';
+// import ConsultationModal from "./ConsultationModal";
+// import ConsultationsTable from './ConsultationTable';
 
-export { ConsultationModal, ConsultationsTable }
+// export { ConsultationModal, ConsultationsTable }
