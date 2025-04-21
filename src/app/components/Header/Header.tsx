@@ -39,24 +39,11 @@ export default async function Header() {
                     <AnimatedLink href="/sobre-nosotros">Sobre Nosotros</AnimatedLink>
 
                     <div className="relative group">
-                        <button className="flex items-center space-x-1 cursor-pointer">
+                        <AnimatedLink href="/derecho" trailing extraClasses="flex items-center space-x-1 cursor-pointer">
                             <span className="relative text-gray-700 hover:text-gray-900 text-xl font-medium">
                                 Servicios
-                                <span className="absolute -bottom-1 left-0 w-0 h-[4px] bg-primary transition-all duration-300 group-hover:w-full"></span>
                             </span>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-5 w-5 transition-transform duration-200 group-hover:rotate-180"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                            >
-                                <path
-                                    fillRule="evenodd"
-                                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.08 1.04l-4.25 4.25a.75.75 0 01-1.06 0L5.25 8.27a.75.75 0 01-.02-1.06z"
-                                    clipRule="evenodd"
-                                />
-                            </svg>
-                        </button>
+                        </AnimatedLink>
 
                         <div className="absolute top-10 left-0 bg-gray-100 shadow-lg rounded-lg min-w-[240px]
                                 opacity-0 invisible group-hover:opacity-100 group-hover:visible
@@ -86,7 +73,7 @@ export default async function Header() {
                                 alt="México"
                                 width={48}
                                 height={32}
-                                className="mr-2"
+                                className="mr-2 min-w-10"
                             />
                         </div>
                         <Link
