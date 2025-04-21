@@ -4,7 +4,7 @@ export interface Consultation {
     email: string
     phone: string
     service: string
-    status: 'pending' | 'completed'
+    status: 'pending' | 'approved' | 'rejected'
     createdAt: string
     appointmentDate: string
     description?: string

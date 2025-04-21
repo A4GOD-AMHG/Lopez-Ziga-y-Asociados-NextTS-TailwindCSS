@@ -5,10 +5,10 @@ import { FiBriefcase, FiAward, FiUsers, FiCheckCircle } from 'react-icons/fi'
 import { useEffect, useRef, useState } from 'react'
 
 const stats = [
-    { id: 1, title: 'Juicios Ganados', value: 951, icon: <FiBriefcase />, suffix: '' },
+    { id: 1, title: 'Juicios Ganados', value: 251, icon: <FiBriefcase />, suffix: '' },
     { id: 2, title: 'Tasa de Éxito Legal', value: 83, icon: <FiAward />, suffix: '%' },
-    { id: 3, title: 'Clientes Complacidos', value: 1320, icon: <FiUsers />, suffix: '' },
-    { id: 4, title: 'Casos Resueltos', value: 1129, icon: <FiCheckCircle />, suffix: '' }
+    { id: 3, title: 'Clientes Complacidos', value: 520, icon: <FiUsers />, suffix: '' },
+    { id: 4, title: 'Casos Resueltos', value: 569, icon: <FiCheckCircle />, suffix: '' }
 ]
 
 const Counter = ({ target, suffix = '' }: { target: number; suffix?: string }) => {

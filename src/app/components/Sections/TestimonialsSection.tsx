@@ -1,108 +1,65 @@
-'use client'
+import Image from 'next/image';
+import dynamic from 'next/dynamic';
+import { testimonials } from '@/lib/testimonials';
 
-import useEmblaCarousel from 'embla-carousel-react'
-import { useEffect } from 'react'
-
-const testimonials = [
-    {
-        name: 'Carlos Martínez',
-        location: 'Empresa Constructora MX',
-        text: 'Gracias a su asesoría logramos resolver un complejo litigio de tierras que llevaba años estancado.',
-        rating: 5,
-        photo: '/images/testimonials/testimonial1.jpg',
-    },
-    {
-        name: 'Ana Rodríguez',
-        location: 'Cadena Hotelera Internacional',
-        text: 'Manejo impecable de nuestros casos laborales. Los recomiendo ampliamente.',
-        rating: 5,
-        photo: '/images/testimonials/testimonial2.jpg',
-    },
-    {
-        name: 'Luis Fernández',
-        location: 'Startup LegalTech',
-        text: 'Su guía legal fue clave para lanzar mi proyecto. Gran equipo, atentos y actualizados.',
-        rating: 4,
-        photo: '/images/testimonials/testimonial3.jpg',
-    },
-    {
-        name: 'María López',
-        location: 'Grupo Industrial LATAM',
-        text: 'Eficiencia y humanidad en cada caso. Siempre confiables.',
-        rating: 5,
-        photo: '/images/testimonials/testimonial4.jpg',
-    },
-]
+const TestimonialsCarousel = dynamic(
+    () => import('@/app/components/Carousels/TestimonialsCarousel'),
+)
 
 export default function TestimonialsSection() {
-    const [emblaRef, emblaApi] = useEmblaCarousel({
-        loop: true,
-        align: 'center',
-        skipSnaps: true,
-    })
-
-    useEffect(() => {
-        if (!emblaApi) return
-
-        const autoScroll = () => {
-            emblaApi.scrollNext()
-            setTimeout(autoScroll, 5000)
-        }
-
-        const timer = setTimeout(autoScroll, 5000)
-
-        return () => clearTimeout(timer)
-    }, [emblaApi])
-
-    const duplicatedTestimonials = [...testimonials, ...testimonials]
-
     return (
-        <section className="bg-white py-24 text-lg">
-            <div className="max-w-6xl mx-auto px-4">
-                <h2 className="text-3xl md:text-4xl font-semibold text-center text-primary mb-16">
-                    Lo que dicen nuestros clientes
+        <section className="bg-white py-16">
+            <div className="container relative mx-auto px-4 h-165 sm:h-120">
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[#70ac60]">
+                    Testimonios de Clientes
                 </h2>
 
-                <div className="overflow-hidden" ref={emblaRef}>
+                <div id="testimonials-viewport" className="overflow-hidden">
                     <div className="flex">
-                        {duplicatedTestimonials.map((testimonial, index) => (
+                        {testimonials.map((testimonial, idx) => (
                             <div
-                                key={index}
-                                className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.3333%] px-3 box-border"
+                                key={idx}
+                                className="relative flex-0 min-w-full w-full h-140 sm:h-100"
                             >
-                                <div className="bg-gray-50 p-8 rounded-xl shadow text-gray-800 h-full text-center">
-                                    <div className="flex justify-center mb-6">
-                                        <img
-                                            src={testimonial.photo}
-                                            alt={testimonial.name}
-                                            className="w-20 h-20 rounded-full object-cover border-2 border-gray-300"
-                                        />
+                                <div className="max-w-3xl mx-auto p-6">
+                                    <div className="bg-white rounded-xl shadow-lg p-8">
+                                        <div className="flex items-center mb-6">
+                                            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#90c67b]">
+                                                <Image
+                                                    src={testimonial.photo}
+                                                    alt={testimonial.name}
+                                                    width={80}
+                                                    height={80}
+                                                    className="object-cover"
+                                                />
+                                            </div>
+                                            <div className="ml-4">
+                                                <h3 className="text-xl font-bold">{testimonial.name}</h3>
+                                                <p className="text-[#757575]">{testimonial.location}</p>
+                                            </div>
+                                        </div>
+                                        <p className="text-gray-700 italic mb-4">"{testimonial.text}"</p>
+                                        <div className="flex gap-1">
+                                            {[...Array(5)].map((_, i) => (
+                                                <svg
+                                                    key={i}
+                                                    className={`w-6 h-6 ${i < testimonial.rating ? 'text-primary' : 'text-gray-300'}`}
+                                                    fill="currentColor"
+                                                    viewBox="0 0 20 20"
+                                                >
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                            ))}
+                                        </div>
                                     </div>
-                                    <p className="italic mb-6 text-gray-700 leading-relaxed text-lg">
-                                        "{testimonial.text}"
-                                    </p>
-                                    <div className="flex justify-center mb-4 gap-1 text-primary">
-                                        {[...Array(5)].map((_, i) => (
-                                            <FiStar
-                                                key={i}
-                                                className={`w-5 h-5 ${i < testimonial.rating ? 'fill-current' : 'text-gray-300'}`}
-                                            />
-                                        ))}
-                                    </div>
-                                    <p className="font-semibold text-gray-900 text-xl">{testimonial.name}</p>
-                                    <p className="text-gray-500 text-sm mt-1">{testimonial.location}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
+
+                <TestimonialsCarousel containerId="testimonials-viewport" />
             </div>
         </section>
     )
 }
-
-const FiStar = ({ className }: { className?: string }) => (
-    <svg className={className} viewBox="0 0 20 20" fill="currentColor">
-        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-    </svg>
-)
