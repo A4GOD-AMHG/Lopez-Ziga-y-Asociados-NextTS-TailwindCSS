@@ -1,10 +1,5 @@
-import { FiMapPin } from 'react-icons/fi'
-import dynamic from 'next/dynamic'
-
-const Map = dynamic(() => import('@/app/components/Map'), {
-    ssr: false,
-    loading: () => <div className="h-64 bg-gray-200 animate-pulse rounded-xl" />
-})
+import Map from '@/app/components/Map';
+import { FiMapPin } from 'react-icons/fi';
 
 export default async function ContactPage() {
     return (
@@ -67,26 +62,25 @@ export default async function ContactPage() {
                                     <h3 className="text-3xl font-bold text-primary mb-6">Nuestras Oficinas</h3>
 
                                     <div className="grid md:grid-cols-2 gap-8">
-                                        <div className="space-y-4">
+                                        <div className="space-y-4 flex flex-col">
                                             <div className="flex items-center gap-4 mb-4">
                                                 <FiMapPin className="text-2xl text-primary" />
                                                 <h4 className="text-xl font-semibold">Ciudad de México</h4>
                                             </div>
-                                            <p className="text-gray-600 mb-4">
-                                                Av. Paseo de la Reforma 509, Cuauhtémoc<br />
-                                                CDMX, 06500
+                                            <p className="text-gray-600 mb-4 grow">
+                                                Mexico Méx MX, Valle de Zumpango 15, 53050 Naucalpan de Juárez, Méx., México
                                             </p>
                                             <div className="h-64 rounded-lg overflow-hidden">
-                                                <Map lat={19.4326} lng={-99.1332} />
+                                                <Map lat={19.4797177} lng={-99.2773184} />
                                             </div>
                                         </div>
 
-                                        <div className="space-y-4">
-                                            <div className="flex items-center gap-4 mb-4">
+                                        <div className="space-y-4 flex flex-col">
+                                            <div className="flex items-center gap-4">
                                                 <FiMapPin className="text-2xl text-primary" />
                                                 <h4 className="text-xl font-semibold">Saltillo</h4>
                                             </div>
-                                            <p className="text-gray-600 mb-4">
+                                            <p className="text-gray-600 mb-4 grow">
                                                 Blvd. Fundadores 2255, Saltillo<br />
                                                 Coahuila, 25280
                                             </p>

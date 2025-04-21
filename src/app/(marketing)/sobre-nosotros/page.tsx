@@ -1,4 +1,4 @@
-import TeamSection from '@/app/components/Sections/TeamSection'
+import TeamSection from '@/app/components/Sections/LegalTeamSection'
 
 export default async function AboutPage() {
     return (

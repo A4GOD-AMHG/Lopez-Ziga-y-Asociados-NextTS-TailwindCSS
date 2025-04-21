@@ -1,10 +1,11 @@
-import Header from "../components/Header/Header"
+import { Header } from "@/app/components/Header";
 
-export default function MarketingLayout({
+export default async function AdminLayout({
     children,
 }: {
     children: React.ReactNode
 }) {
+
     return (
         <>
             <Header />

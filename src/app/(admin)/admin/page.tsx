@@ -1,30 +1,22 @@
 
-import { redirect } from 'next/navigation'
-import { cookies } from 'next/headers'
-import { Consultation } from '@/types/consultations'
-import { adminDb } from '@/lib/firebase_admin'
-import ConsultationsTable from '@/app/components/Consultations/ConsultationTable'
-import { logout } from '@/app/actions'
-import { FiLogOut } from 'react-icons/fi'
+import { Consultation } from '@/types/consultations';
+import { adminDb } from '@/lib/firebase_admin';
+import { ConsultationsTable } from '@/app/components/Consultations';
+import { logout } from '@/app/actions';
+import { FiLogOut } from 'react-icons/fi';
 
 export default async function AdminPage() {
-    const cookieStore = await cookies()
-    const isAuthenticated = cookieStore.get('admin-authenticated')?.value === 'true'
-
-    if (!isAuthenticated) {
-        redirect('/admin/login')
-    }
-
     const consultationsSnapshot = await adminDb.collection('consultations').get()
     const consultations: Consultation[] = consultationsSnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data() as Omit<Consultation, 'id'>
-    }))
+    }));
+
     return (
         <main className="container pt-40 mx-auto px-4 py-8 flex flex-col grow">
             <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="flex justify-between items-center mb-6">
-                    <h1 className="text-3xl font-bold text-gray-900">Consultas Agendadas</h1>
+                <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
+                    <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Consultas Agendadas</h1>
                     <div className="flex items-center space-x-4">
                         <form action={logout}>
                             <button

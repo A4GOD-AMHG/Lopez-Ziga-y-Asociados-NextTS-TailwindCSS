@@ -1,9 +1,6 @@
+import { ServicesSection, LegalTeamSection, StatsSection, TestimonialsSection } from '@/app/components/Sections'
 import HeroContent from '@/app/components/HeroContent'
-import ServicesSection from '@/app/components/Sections/ServicesSection'
-import StatsSection from '@/app/components/Sections/StatsSection'
-import TeamSection from '@/app/components/Sections/TeamSection'
-import TestimonialsSection from '@/app/components/Sections/TestimonialsSection'
-import Image from 'next/image'
+import Image from 'next/image';
 
 export default async function HomePage() {
     return (
@@ -31,7 +28,7 @@ export default async function HomePage() {
                     <div className="max-w-6xl mx-auto text-center">
                         <h2 className="text-5xl font-bold text-primary mb-4">Sobre Nosotros</h2>
                         <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-8">
-                            Más de 7 años en el marcado
+                            Más de 7 años en el mercado
                         </h3>
                         <div className="text-xl text-gray-800 space-y-6">
                             <p>
@@ -61,7 +58,7 @@ export default async function HomePage() {
             </section>
 
             <StatsSection />
-            <TeamSection />
+            <LegalTeamSection />
             <TestimonialsSection />
         </main>
     )
