@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SVGProps } from "react";
 
 interface AnimatedLinkProps {
     href: string;
@@ -9,11 +10,12 @@ interface AnimatedLinkProps {
     extraClasses?: string;
     onClick?: () => void;
     showUnderline?: boolean;
+    trailing?: boolean;
 }
 
-export default function AnimatedLink({ href, children, onClick, showUnderline = true, extraClasses = "" }: AnimatedLinkProps) {
+export default function AnimatedLink({ href, children, onClick, showUnderline = true, extraClasses = "", trailing = false }: AnimatedLinkProps) {
     const pathname = usePathname();
-    const isActive = pathname === href;
+    const isActive = pathname === href || href != "/" && pathname.includes(href);
 
     return (
         <Link href={href} className={`relative group text-xl font-medium  ${extraClasses}`} onClick={onClick}>
@@ -22,6 +24,18 @@ export default function AnimatedLink({ href, children, onClick, showUnderline = 
                 className={`absolute left-0 -bottom-1 h-[4px] bg-primary transition-all duration-200 ease-in-out 
                     ${isActive ? "w-full" : "w-[0px] group-hover:w-full"}`}
             ></span>)}
+            {trailing && <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 transition-transform duration-200 group-hover:rotate-180"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+            >
+                <path
+                    fillRule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.08 1.04l-4.25 4.25a.75.75 0 01-1.06 0L5.25 8.27a.75.75 0 01-.02-1.06z"
+                    clipRule="evenodd"
+                />
+            </svg>}
         </Link>
     );
 };

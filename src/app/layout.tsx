@@ -1,14 +1,14 @@
-import type { Metadata } from 'next'
-import '@/styles/globals.css'
-import { ScrollToTop } from './components/ScrollToTop'
+import type { Metadata } from 'next';
+import '@/styles/globals.css';
+import { ScrollToTop } from './components/ScrollToTop';
 
 export const metadata: Metadata = {
-  // metadataBase: new URL('https://lopezzigayasociados.com'),
+  metadataBase: new URL('https://lopezzigayasociados.com.mx/'),
   title: {
     default: 'López Ziga y Asociados',
     template: '%s | López Ziga y Asociados'
   },
-  description: 'Bufete jurídico mexicano especializado en derecho penal, inmobiliario, familiar y divorcios no disputados. Protegiendo tus derechos desde 1995.',
+  description: 'Con más de 20 años de experiencia y siete años en nuestro actual Despacho Jurídico, Nos Especializado en Derecho Familiar y Derecho Penal, Asociado con Firmas de Abogados Especialistas en Derecho Civil, Derecho Agrario y Derecho Mercantil. Realizamos Amparos Penales, Defensa de los Derechos de los Menores de edad, Defensa de los Derechos de Adultos Mayores, Recuperación de Inmuebles, Regularización de Inmuebles,',
   keywords: ['abogados México', 'derecho familiar', 'derecho penal', 'derecho inmobiliario',],
   authors: [{ name: 'Emyux', url: "https://emyux.com" }],
   robots: {
@@ -16,32 +16,32 @@ export const metadata: Metadata = {
     follow: true,
     'max-image-preview': 'large',
     'max-video-preview': -1,
-    'max-snippet': -1
+    'max-snippet': -1,
   },
   openGraph: {
     type: 'website',
     locale: 'es_MX',
-    // url: 'https://lopezzigayasociados.com',
     siteName: 'López Ziga y Asociados',
     title: 'López Ziga y Asociados',
+    url: 'https://lopezzigayasociados.com.mx/',
     description:
-      'Bufete jurídico mexicano especializado en derecho penal, inmobiliario, familiar y divorcios no disputados. Protegiendo tus derechos desde 1995.',
+      'Con más de 20 años de experiencia y siete años en nuestro actual Despacho Jurídico, Nos Especializado en Derecho Familiar y Derecho Penal, Asociado con Firmas de Abogados Especialistas en Derecho Civil, Derecho Agrario y Derecho Mercantil. Realizamos Amparos Penales, Defensa de los Derechos de los Menores de edad, Defensa de los Derechos de Adultos Mayores, Recuperación de Inmuebles, Regularización de Inmuebles,',
     images: [
       {
         url: '/images/logo.png',
         width: 1200,
         height: 630,
-        alt: 'López Ziga y Asociados'
-      }
-    ]
+        alt: 'Logo de López Ziga y Asociados',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'López Ziga y Asociados',
+    title: 'Oscar Edwin Lopez – Socio en López Ziga & Asociados',
     description:
-      'Bufete jurídico mexicano especializado en derecho penal, inmobiliario, familiar y divorcios no disputados. Protegiendo tus derechos desde 1995.',
-    images: ['/images/logo.png'],
-    creator: '@emyux.com'
+      'Abogado Postulante, Socio en López Ziga & Asociados, habitante de Naucalpan, Edo. Mex.; orgulloso de origen zapoteca, paisano de corazón.',
+    images: ['https://x.com/oscaredwinlopez/photo'],
+    creator: 'https://emyux.com',
   },
   icons: {
     icon: '/favicon.ico',
