@@ -5,13 +5,13 @@ import { Resend } from 'resend';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
-const resend = new Resend(process.env.resend_api_key)
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function addToNewsletter(email: string) {
     try {
         await resend.contacts.create({
             email,
-            audienceId: process.env.resend_audience_id!,
+            audienceId: process.env.RESEND_AUDIENCE_ID!,
             unsubscribed: false
         })
 
@@ -91,7 +91,7 @@ export async function createConsultation(formData: FormData) {
         const docRef = await adminDb.collection('consultations').add(consultationData)
 
         await resend.emails.send({
-            from: `Consultas <${process.env.resend_email}>`,
+            from: `Consultas <${process.env.RESEND_EMAIL}>`,
             to: consultationData.email,
             subject: 'Consulta recibida',
             html: `<p>Hemos recibido tu consulta para el ${new Date(appointmentDate).toLocaleDateString()}. Te contactaremos pronto.</p>`
@@ -114,7 +114,7 @@ export async function handleAdminLogin(
             return { error: 'Contraseña requerida' }
         }
 
-        if (password !== process.env.admin_password) {
+        if (password !== process.env.ADMIN_PASSWORD) {
             return { error: 'Contraseña incorrecta' }
         }
 
