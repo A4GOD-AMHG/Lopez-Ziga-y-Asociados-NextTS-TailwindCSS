@@ -1,28 +1,17 @@
 'use server'
 
-import { adminDb } from "@/lib/firebase_admin"
-import { Resend } from 'resend'
-import { cookies } from 'next/headers'
-import { redirect } from 'next/navigation'
+import { adminDb } from "@/lib/firebase_admin";
+import { Resend } from 'resend';
+import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
 
-interface ConsultationData {
-    name: string
-    email: string
-    phone: string
-    service: string
-    description?: string
-    status: 'pending' | 'completed'
-    appointmentDate: string
-    createdAt: string
-}
-
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.resend_api_key)
 
 export async function addToNewsletter(email: string) {
     try {
         await resend.contacts.create({
             email,
-            audienceId: process.env.RESEND_AUDIENCE_ID!,
+            audienceId: process.env.resend_audience_id!,
             unsubscribed: false
         })
 
@@ -102,7 +91,7 @@ export async function createConsultation(formData: FormData) {
         const docRef = await adminDb.collection('consultations').add(consultationData)
 
         await resend.emails.send({
-            from: `Consultas <${process.env.RESEND_EMAIL}>`,
+            from: `Consultas <${process.env.resend_email}>`,
             to: consultationData.email,
             subject: 'Consulta recibida',
             html: `<p>Hemos recibido tu consulta para el ${new Date(appointmentDate).toLocaleDateString()}. Te contactaremos pronto.</p>`
@@ -125,7 +114,7 @@ export async function handleAdminLogin(
             return { error: 'Contraseña requerida' }
         }
 
-        if (password !== process.env.ADMIN_PASSWORD) {
+        if (password !== process.env.admin_password) {
             return { error: 'Contraseña incorrecta' }
         }
 

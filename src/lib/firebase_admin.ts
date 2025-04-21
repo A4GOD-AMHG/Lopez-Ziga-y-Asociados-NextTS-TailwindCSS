@@ -3,9 +3,9 @@ import { getFirestore } from 'firebase-admin/firestore'
 
 const firebaseAdminConfig = {
     credential: cert({
-        projectId: process.env.FIREBASE_PROJECT_ID,
-        privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
-        clientEmail: process.env.FIREBASE_CLIENT_EMAIL
+        projectId: process.env.firebase_project_id,
+        privateKey: process.env.firebase_private_key?.replace(/\\n/g, '\n'),
+        clientEmail: process.env.firebase_client_email
     })
 }
 
