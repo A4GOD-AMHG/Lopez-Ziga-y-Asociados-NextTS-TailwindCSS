@@ -10,8 +10,8 @@ export default async function HomePage() {
                     alt='bg'
                     placeholder='blur'
 
-                    src="/images/law-bg.jpg"
-                    blurDataURL='/images/law-bg.jpg'
+                    src="/images/law-bg.avif"
+                    blurDataURL='/images/law-bg.avif'
                     fill
                 />
                 <div className="parallax-overlay" />

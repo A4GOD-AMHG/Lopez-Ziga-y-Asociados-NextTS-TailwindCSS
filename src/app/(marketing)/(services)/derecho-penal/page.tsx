@@ -14,19 +14,19 @@ const slides = [
         title: "Defensa Penal Especializada en México",
         description: "Expertos en procesos judiciales complejos: desde delitos menores hasta casos complejos. Protección legal integral con estrategias personalizadas.",
         ctaText: "Agenda tu Consulta",
-        bgImage: "/images/penal-bg1.jpg",
+        bgImage: "/images/penal-bg1.avif",
     },
     {
         title: "Juicios Orales con Resultados Comprobados",
         description: "Representación experta en el nuevo sistema de justicia penal. Más de 200 casos resueltos exitosamente en los últimos 3 años.",
         ctaText: "Agenda tu Consulta",
-        bgImage: "/images/penal-bg2.jpg",
+        bgImage: "/images/penal-bg2.avif",
     },
     {
         title: "Defensa en Delitos Federales",
         description: "Especialistas en derechos penales y federales",
         ctaText: "Agenda tu Consulta",
-        bgImage: "/images/penal-bg3.jpg",
+        bgImage: "/images/penal-bg3.avif",
     },
 ]
 

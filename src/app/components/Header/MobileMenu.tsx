@@ -9,7 +9,7 @@ export default function MobileMenu() {
 
     return (
         <>
-            <button onClick={() => setMenuOpen((o) => !o)} className="text-primary focus:outline-none">
+            <button title="menu" onClick={() => setMenuOpen((o) => !o)} className="text-primary focus:outline-none">
                 {menuOpen ?
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -52,6 +52,7 @@ export default function MobileMenu() {
 
                     <li>
                         <button
+                            title="services"
                             onClick={() => setServicesOpen((o) => !o)}
                             className="flex items-center justify-end w-full text-gray-700 text-xl font-medium gap-1"
                         >

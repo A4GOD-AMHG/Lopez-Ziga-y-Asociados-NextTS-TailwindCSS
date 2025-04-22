@@ -43,7 +43,7 @@ export default async function ServicesSection() {
                                 <div className="inline-block">{service.icon}</div>
                                 <h3 className="text-3xl md:text-3xl font-bold mb-4">{service.title}</h3>
                                 <p className="text-gray-600 mb-6 text-xl">{service.description}</p>
-                                <span className="text-primary text-lg font-semibold cursor-pointer flex items-center justify-center gap-2 mx-auto">
+                                <span className="text-gray-900 text-lg font-semibold cursor-pointer flex items-center justify-center gap-2 mx-auto">
                                     Click para ver más
                                 </span>
                             </div>

@@ -13,19 +13,19 @@ const slides = [
         title: "Protección Legal para Transacciones Inmobiliarias",
         description: "Asesoría integral en compraventa, arrendamiento y desarrollo de propiedades. Garantía legal en todas las etapas de su inversión.",
         ctaText: "Agenda tu consulta",
-        bgImage: "/images/inmobiliario-bg1.jpg",
+        bgImage: "/images/inmobiliario-bg1.avif",
     },
     {
         title: "Soluciones en Conflictos de Propiedad",
         description: "Defensa legal especializada en litigios de titularidad, desalojos y pólizas jurídicas de arrendamiento.",
         ctaText: "Agenda tu consulta",
-        bgImage: "/images/inmobiliario-bg2.jpg",
+        bgImage: "/images/inmobiliario-bg2.avif",
     },
     {
         title: "Asesoría en Desarrollo Inmobiliario",
         description: "Gestión legal completa para proyectos de construcción: permisos, contratos con proveedores y cumplimiento normativo.",
         ctaText: "Agenda tu consulta",
-        bgImage: "/images/inmobiliario-bg3.jpg",
+        bgImage: "/images/inmobiliario-bg3.avif",
     }
 ]
 
