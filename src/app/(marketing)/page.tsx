@@ -12,7 +12,9 @@ export default async function HomePage() {
                     src="/images/law-bg.avif"
                     priority
                     blurDataURL='/images/law-bg.avif'
-                    fill
+                    width={1350}
+                    height={658}
+                    sizes="100vw"
                 />
                 <div className="parallax-overlay" />
                 <div className="container mx-auto px-4 relative z-10">

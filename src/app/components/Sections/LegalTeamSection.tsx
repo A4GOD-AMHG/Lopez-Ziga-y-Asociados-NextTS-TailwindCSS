@@ -1,18 +1,6 @@
 import { teamMembers } from '@/lib/team_members'
 import Image from 'next/image'
 
-type TeamMember = {
-    id: number
-    name: string
-    role: string
-    experience: string
-    cases?: string
-    email: string
-    photo: string
-    description?: string
-    areas?: string[]
-}
-
 export default async function LegalTeamSection() {
     const getGridClass = () => {
         if (teamMembers.length === 1) return 'grid-cols-1 max-w-6xl mx-auto'
@@ -34,7 +22,6 @@ export default async function LegalTeamSection() {
                             className={`group bg-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-out overflow-hidden border border-gray-100
                             ${teamMembers.length === 1 ? 'md:flex md:h-[500px]' : ''}`}
                         >
-                            {/* Contenedor de imagen */}
                             <div className={`relative ${teamMembers.length === 1 ? 'md:w-1/2 md:h-full h-96' : 'h-96'}`}>
                                 <Image
                                     src={member.photo}
@@ -48,7 +35,6 @@ export default async function LegalTeamSection() {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
                             </div>
 
-                            {/* Contenedor de contenido */}
                             <div className={`p-6 ${teamMembers.length === 1 ? 'md:w-1/2 md:p-8' : ''}`}>
                                 <div className="mb-4 md:mb-5">
                                     <h3 className="text-2xl md:text-3xl font-bold text-[#2c3e50] mb-2">{member.name}</h3>
