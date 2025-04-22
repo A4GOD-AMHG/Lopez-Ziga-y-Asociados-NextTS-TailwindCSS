@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { SVGProps } from "react";
 
 interface AnimatedLinkProps {
     href: string;
@@ -11,14 +10,15 @@ interface AnimatedLinkProps {
     onClick?: () => void;
     showUnderline?: boolean;
     trailing?: boolean;
+    noredirect?: boolean;
 }
 
-export default function AnimatedLink({ href, children, onClick, showUnderline = true, extraClasses = "", trailing = false }: AnimatedLinkProps) {
+export default function AnimatedLink({ href, children, onClick, showUnderline = true, noredirect = false, extraClasses = "", trailing = false }: AnimatedLinkProps) {
     const pathname = usePathname();
     const isActive = pathname === href || href != "/" && pathname.includes(href);
 
     return (
-        <Link href={href} className={`relative group text-xl font-medium  ${extraClasses}`} onClick={onClick}>
+        <Link href={noredirect ? "/" : href} className={`relative group text-xl font-medium  ${extraClasses}`} onClick={onClick}>
             <span className={`${isActive ? "text-gray-900" : "text-gray-700 group-hover:text-gray-900"} ${isActive && !showUnderline && "underline underline-offset-8 decoration-4 decoration-primary"}`}>{children}</span>
             {showUnderline && (<span
                 className={`absolute left-0 -bottom-1 h-[4px] bg-primary transition-all duration-200 ease-in-out 

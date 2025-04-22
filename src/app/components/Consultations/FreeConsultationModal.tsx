@@ -44,7 +44,7 @@ export default function FreeConsultationModal({ isOpen, service, onClose }: Free
     if (!isOpen) return null
 
     return (
-        <div onClick={onClose} className="fixed inset-0 bg-black/50 z-30 flex items-center justify-center p-4">
+        <div onClick={onClose} className="fixed inset-0 bg-black/50 mt-0 sm:mt-12 z-50 flex items-center justify-center p-4">
             <div onClick={(e) => e.stopPropagation()} className="bg-white rounded-xl max-w-2xl w-full relative">
                 <button
                     onClick={onClose}

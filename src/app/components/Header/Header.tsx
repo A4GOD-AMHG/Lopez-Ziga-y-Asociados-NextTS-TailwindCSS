@@ -39,7 +39,7 @@ export default async function Header() {
                     <AnimatedLink href="/sobre-nosotros">Sobre Nosotros</AnimatedLink>
 
                     <div className="relative group">
-                        <AnimatedLink href="/derecho" trailing extraClasses="flex items-center space-x-1 cursor-pointer">
+                        <AnimatedLink href="/derecho" noredirect trailing extraClasses="flex items-center space-x-1 cursor-pointer">
                             <span className="relative text-gray-700 hover:text-gray-900 text-xl font-medium">
                                 Servicios
                             </span>
