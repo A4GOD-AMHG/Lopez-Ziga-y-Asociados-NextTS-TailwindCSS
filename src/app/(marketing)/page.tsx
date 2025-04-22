@@ -9,8 +9,8 @@ export default async function HomePage() {
                 <Image
                     alt='bg'
                     placeholder='blur'
-
                     src="/images/law-bg.avif"
+                    priority
                     blurDataURL='/images/law-bg.avif'
                     fill
                 />
