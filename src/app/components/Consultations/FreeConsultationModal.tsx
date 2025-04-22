@@ -1,7 +1,8 @@
 'use client'
 
 import { FiX, FiSend } from 'react-icons/fi';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 interface FreeConsultationModalProps {
     isOpen: boolean;
@@ -43,9 +44,9 @@ export default function FreeConsultationModal({ isOpen, service, onClose }: Free
 
     if (!isOpen) return null
 
-    return (
-        <div onClick={onClose} className="fixed inset-0 bg-black/50 mt-0 sm:mt-12 z-50 flex items-center justify-center p-4">
-            <div onClick={(e) => e.stopPropagation()} className="bg-white rounded-xl max-w-2xl w-full relative">
+    return createPortal(
+        <div onClick={onClose} className="fixed inset-0 bg-black/50 z-[1000] flex overflow-auto items-start sm:items-center justify-center p-4">
+            <div onClick={(e) => e.stopPropagation()} className="bg-white rounded-xl w-full max-w-full md:max-w-2xl mx-4 relative overflow-y-scroll scrollbar-hide scroll-smooth max-h-[90vh]">
                 <button
                     onClick={onClose}
                     className="absolute top-4 right-4 text-gray-500 hover:text-primary"
@@ -85,7 +86,7 @@ export default function FreeConsultationModal({ isOpen, service, onClose }: Free
                                 />
                             </div>
 
-                            <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                                 <div>
                                     <label className="block text-gray-700 mb-2">¿Caso en trámite?</label>
                                     <select
@@ -115,7 +116,7 @@ export default function FreeConsultationModal({ isOpen, service, onClose }: Free
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
 
                                 <div className='col-span-1'>
                                     <label className="block text-gray-700 mb-2">¿Tiene presupuesto?</label>
@@ -170,6 +171,6 @@ export default function FreeConsultationModal({ isOpen, service, onClose }: Free
                     </form>
                 </div>
             </div>
-        </div>
+        </div>, document.body
     )
 }

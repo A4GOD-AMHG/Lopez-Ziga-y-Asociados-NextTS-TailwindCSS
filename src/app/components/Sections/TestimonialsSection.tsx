@@ -9,7 +9,7 @@ const TestimonialsCarousel = dynamic(
 export default function TestimonialsSection() {
     return (
         <section className="bg-white py-16">
-            <div className="container relative mx-auto px-4 h-165 sm:h-120">
+            <div className="container relative mx-auto px-4 h-140 sm:h-100">
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[#70ac60]">
                     Testimonios de Clientes
                 </h2>
@@ -24,7 +24,7 @@ export default function TestimonialsSection() {
                                 <div className="max-w-3xl mx-auto p-6">
                                     <div className="bg-white rounded-xl shadow-lg p-8">
                                         <div className="flex items-center mb-6">
-                                            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#90c67b]">
+                                            <div className="w-16 flex-shrink-0 aspect-square rounded-full overflow-hidden border-2 border-[#90c67b]">
                                                 <Image
                                                     src={testimonial.photo}
                                                     alt={testimonial.name}
@@ -33,9 +33,9 @@ export default function TestimonialsSection() {
                                                     className="object-cover"
                                                 />
                                             </div>
-                                            <div className="ml-4">
-                                                <h3 className="text-xl font-bold">{testimonial.name}</h3>
-                                                <p className="text-[#757575]">{testimonial.location}</p>
+                                            <div className="ml-4 flex-1 min-w-0">
+                                                <h3 className="text-xl font-bold truncate">{testimonial.name}</h3>
+                                                <p className="text-[#757575] truncate">{testimonial.location}</p>
                                             </div>
                                         </div>
                                         <p className="text-gray-700 italic mb-4">"{testimonial.text}"</p>
