@@ -12,7 +12,7 @@ export const metadata = {
 const slides = [
     {
         title: "Defensa Penal Especializada en México",
-        description: "Expertos en procesos judiciales complejos: desde delitos menores hasta casos de alta repercusión mediática. Protección legal integral con estrategias personalizadas.",
+        description: "Expertos en procesos judiciales complejos: desde delitos menores hasta casos complejos. Protección legal integral con estrategias personalizadas.",
         ctaText: "Agenda tu Consulta",
         bgImage: "/images/penal-bg1.jpg",
     },

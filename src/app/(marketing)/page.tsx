@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default async function HomePage() {
     return (
         <main className="relative">
-            <section className="relative h-[50vh] mt-24 sm:h-[70vh] flex items-center justify-center overflow-hidden">
+            <section className="relative h-[50vh] mt-12 sm:mt-24 sm:h-[70vh] flex items-center justify-center overflow-hidden">
                 <Image
                     alt='bg'
                     placeholder='blur'
@@ -35,7 +35,7 @@ export default async function HomePage() {
                                 Fundado en el 18 de diciembre del año 2018, Lopez Ziga & Asociados nació de la visión de crear un despacho legal diferente: más ágil, transparente y enfocado en resultados concretos para personas físicas y morales.
                             </p>
                             <p>
-                                Trabajamos junto a ti y/o a tu empresa para proteger sus intereses y crear estrategias legales que resuelvan conflictos de manera ágil y justa. Nuestro enfoque está basado en la confianza y la colaboración, brindando soluciones integrales adaptadas a las necesidades específicas de cada organización.
+                                Trabajamos a tu lado proteger tus intereses y crear estrategias legales que resuelvan conflictos de manera ágil y justa. Nuestro enfoque está basado en la confianza y la colaboración, brindando soluciones integrales adaptadas a las necesidades específicas de cada organización.
                             </p>
                         </div>
 

@@ -1,7 +1,8 @@
 'use client'
 
-import { FiArrowRight } from 'react-icons/fi'
-import { useState } from 'react'
+import { FiArrowRight } from 'react-icons/fi';
+import { useState } from 'react';
+import FreeConsultationModal from './Consultations/FreeConsultationModal';
 // import ConsultationModal from './Consultations/ConsultationModal'
 
 export default function HeroContent() {
@@ -22,11 +23,22 @@ export default function HeroContent() {
                     className="bg-primary cursor-pointer text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 mx-auto hover:bg-secondary transition-all"
                     onClick={() => setIsModalOpen(true)}
                 >
-                    Agenda tu Consulta
+                    Obtén Asesoría Gratis
                     <FiArrowRight className="text-xl" />
                 </button>
+                {/* <button
+                    className="bg-primary cursor-pointer text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 mx-auto hover:bg-secondary transition-all"
+                    onClick={() => setIsModalOpen(true)}
+                >
+                    Agenda tu Consulta
+                    <FiArrowRight className="text-xl" />
+                </button> */}
             </div>
 
+            <FreeConsultationModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+            />
             {/* <ConsultationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} /> */}
         </>
     )

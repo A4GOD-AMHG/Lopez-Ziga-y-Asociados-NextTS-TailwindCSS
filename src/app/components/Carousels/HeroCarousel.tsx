@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import type { EmblaCarouselType } from 'embla-carousel';
+import FreeConsultationModal from '../Consultations/FreeConsultationModal';
 // import ConsultationModal from '../Consultations/ConsultationModal';
 
 interface HeroCarrouselProps {
@@ -73,6 +74,13 @@ export default function HeroCarousel({ service, containerId }: HeroCarrouselProp
                     />
                 ))}
             </div>
+
+            <FreeConsultationModal
+                isOpen={isModalOpen}
+                service={service}
+                onClose={() => setIsModalOpen(false)}
+            />
+
             {/* <ConsultationModal
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
