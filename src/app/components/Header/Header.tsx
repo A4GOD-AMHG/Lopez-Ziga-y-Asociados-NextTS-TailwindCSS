@@ -73,7 +73,7 @@ export default async function Header() {
                                 alt="México"
                                 width={48}
                                 height={32}
-                                className="mr-2 min-w-10"
+                                className="mr-2 w-12 h-auto"
                             />
                         </div>
                         <Link
