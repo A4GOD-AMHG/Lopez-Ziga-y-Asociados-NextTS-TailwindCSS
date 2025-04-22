@@ -30,15 +30,15 @@ export default function FreeConsultationModal({ isOpen, service, onClose }: Free
         }
 
         const message = `Nueva solicitud de asesoría gratuita:%0A%0A
-                Nombre: ${formData.nombre}%0A
-                Email: ${formData.email}%0A
-                Servicio: ${formData.servicio}%0A
-                Problema: ${formData.problema}%0A
-                ¿Ya está en trámite?: ${formData.enTramite}%0A
-                ¿Cuenta con presupuesto?: ${formData.presupuesto}%0A
-                Urgencia: ${formData.urgencia}`
+Nombre: ${formData.nombre}%0A
+Email: ${formData.email}%0A
+Servicio: ${formData.servicio}%0A
+Problema: ${formData.problema}%0A
+¿Ya está en trámite?: ${formData.enTramite}%0A
+¿Cuenta con presupuesto?: ${formData.presupuesto}%0A
+Urgencia: ${formData.urgencia}`
 
-        window.open(`https://wa.me/5355529865?text=${message}`, '_blank')
+        window.open(`https://wa.me/+525514083982?text=${message}`, '_blank')
         onClose()
     }
 
