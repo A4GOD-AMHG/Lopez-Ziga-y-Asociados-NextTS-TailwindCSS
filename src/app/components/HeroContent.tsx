@@ -20,8 +20,8 @@ export default function HeroContent() {
                 </p>
 
                 <button
-                    title='modal'
-                    className="bg-primary cursor-pointer text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 mx-auto hover:bg-secondary transition-all"
+                    title='Obtén Asesoría Gratis'
+                    className="bg-primary cursor-pointer text-white motion-scale-loop-[0.95] motion-duration-[1500ms] motion-ease-in-out px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 mx-auto hover:bg-secondary"
                     onClick={() => setIsModalOpen(true)}
                 >
                     Obtén Asesoría Gratis

@@ -12,19 +12,19 @@ const slides = [
     {
         title: "Protección Legal para Transacciones Inmobiliarias",
         description: "Asesoría integral en compraventa, arrendamiento y desarrollo de propiedades. Garantía legal en todas las etapas de su inversión.",
-        ctaText: "Agenda tu consulta",
+        ctaText: "Obtén Asesoría Gratis",
         bgImage: "/images/inmobiliario-bg1.avif",
     },
     {
         title: "Soluciones en Conflictos de Propiedad",
         description: "Defensa legal especializada en litigios de titularidad, desalojos y pólizas jurídicas de arrendamiento.",
-        ctaText: "Agenda tu consulta",
+        ctaText: "Obtén Asesoría Gratis",
         bgImage: "/images/inmobiliario-bg2.avif",
     },
     {
         title: "Asesoría en Desarrollo Inmobiliario",
         description: "Gestión legal completa para proyectos de construcción: permisos, contratos con proveedores y cumplimiento normativo.",
-        ctaText: "Agenda tu consulta",
+        ctaText: "Obtén Asesoría Gratis",
         bgImage: "/images/inmobiliario-bg3.avif",
     }
 ]
@@ -67,8 +67,8 @@ const HeroCarrousel = dynamic(
 
 export default async function DerechoInmobiliario() {
     return (
-        <main className="min-h-screen mt-16 sm:mt-24 flex flex-col">
-            <div className="relative h-[450px] md:h-[800px] overflow-hidden">
+        <main className="min-h-screen flex flex-col">
+            <div className="relative h-[50vh] mt-12 sm:mt-24 sm:h-[70vh] overflow-hidden">
                 <div id="carousel-viewport" className="overflow-hidden h-full w-full">
                     <div className="flex h-full">
                         {slides.map((slide, idx) => (

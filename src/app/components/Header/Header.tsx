@@ -62,6 +62,7 @@ export default async function Header() {
                     </div>
 
                     <AnimatedLink href="/contacto">Contacto</AnimatedLink>
+                    <AnimatedLink href="/politicas-de-privacidad">Políticas</AnimatedLink>
                     <AnimatedLink href="/preguntas">Preguntas</AnimatedLink>
                 </nav>
 

@@ -1,8 +1,8 @@
 'use client'
 
 import { MapContainer, TileLayer, Marker } from 'react-leaflet'
-import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
+import { useEffect, useState } from 'react'
 
 const createCustomIcon = (iconUrl: string) => {
     return L.icon({
@@ -14,8 +14,12 @@ const createCustomIcon = (iconUrl: string) => {
 }
 
 const PrimaryIcon = createCustomIcon('/images/map-marker.svg')
-
 export default function Map({ lat, lng }: { lat: number; lng: number }) {
+    const [isMounted, setIsMounted] = useState(false);
+    useEffect(() => { setIsMounted(true) }, []);
+
+    if (!isMounted) return null
+
     return (
         <MapContainer
             center={[lat, lng]}

@@ -13,19 +13,19 @@ const slides = [
     {
         title: "Defensa Penal Especializada en México",
         description: "Expertos en procesos judiciales complejos: desde delitos menores hasta casos complejos. Protección legal integral con estrategias personalizadas.",
-        ctaText: "Agenda tu Consulta",
+        ctaText: "Obtén Asesoría Gratis",
         bgImage: "/images/penal-bg1.avif",
     },
     {
         title: "Juicios Orales con Resultados Comprobados",
         description: "Representación experta en el nuevo sistema de justicia penal. Más de 200 casos resueltos exitosamente en los últimos 3 años.",
-        ctaText: "Agenda tu Consulta",
+        ctaText: "Obtén Asesoría Gratis",
         bgImage: "/images/penal-bg2.avif",
     },
     {
         title: "Defensa en Delitos Federales",
         description: "Especialistas en derechos penales y federales",
-        ctaText: "Agenda tu Consulta",
+        ctaText: "Obtén Asesoría Gratis",
         bgImage: "/images/penal-bg3.avif",
     },
 ]
@@ -58,8 +58,8 @@ const HeroCarousel = dynamic(
 export default async function DerechoPenal() {
 
     return (
-        <main className="min-h-screen mt-16 sm:mt-24 flex flex-col">
-            <div className="relative h-[450px] md:h-[800px] overflow-hidden">
+        <main className="min-h-screen flex flex-col">
+            <div className="relative h-[50vh] mt-12 sm:mt-24 sm:h-[70vh] overflow-hidden">
                 <div id="carousel-viewport" className="overflow-hidden h-full w-full">
                     <div className="flex h-full">
                         {slides.map((slide, idx) => (

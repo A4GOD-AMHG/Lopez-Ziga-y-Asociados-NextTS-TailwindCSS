@@ -91,6 +91,11 @@ export default function MobileMenu() {
                         </AnimatedLink>
                     </li>
                     <li>
+                        <AnimatedLink href="/politicas-de-privacidad" onClick={() => setMenuOpen(false)}>
+                            Políticas de Privacidad
+                        </AnimatedLink>
+                    </li>
+                    <li>
                         <AnimatedLink href="/preguntas" onClick={() => setMenuOpen(false)}>
                             Preguntas
                         </AnimatedLink>

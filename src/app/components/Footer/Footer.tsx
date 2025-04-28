@@ -31,6 +31,7 @@ export default async function Footer() {
                         <ul className="space-y-3 portrait:space-y-2">
                             <li><a href="/" className="text-gray-500 text-lg font-normal hover:text-gray-700 transition-colors">Inicio</a></li>
                             <li><a href="/sobre-nosotros" className="text-gray-500 text-lg font-normal hover:text-gray-700 transition-colors">Sobre Nosotros</a></li>
+                            <li><a href="/politicas-de-privacidad" className="text-gray-500 text-lg font-normal hover:text-gray-700 transition-colors">Políticas de Privacidad</a></li>
                             <li><a href="/contacto" className="text-gray-500 text-lg font-normal hover:text-gray-700 transition-colors">Contacto</a></li>
                             <li><a href="/preguntas" className="text-gray-500 text-lg font-normal hover:text-gray-700 transition-colors">Preguntas</a></li>
                         </ul>

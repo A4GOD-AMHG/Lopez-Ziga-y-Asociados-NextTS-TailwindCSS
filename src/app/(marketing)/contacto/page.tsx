@@ -1,5 +1,8 @@
-import Map from '@/app/components/Map';
+
+import dynamic from 'next/dynamic';
 import { FiMapPin } from 'react-icons/fi';
+
+const Map = dynamic(() => import("@/app/components/Map"));
 
 export default async function ContactPage() {
     return (
@@ -71,7 +74,7 @@ export default async function ContactPage() {
                                                 Mexico Méx MX, Valle de Zumpango 15, 53050 Naucalpan de Juárez, Méx., México
                                             </p>
                                             <div className="h-64 rounded-lg overflow-hidden">
-                                                <Map lat={19.4797177} lng={-99.2773184} />
+                                                <Map lat={19.479645} lng={-99.2361324} />
                                             </div>
                                         </div>
 
@@ -81,11 +84,11 @@ export default async function ContactPage() {
                                                 <h4 className="text-xl font-semibold">Saltillo</h4>
                                             </div>
                                             <p className="text-gray-600 mb-4 grow">
-                                                Blvd. Fundadores 2255, Saltillo<br />
-                                                Coahuila, 25280
+                                                Cocoyoc - Oaxtepec 26, El Partidor,<br />
+                                                62736 Cocoyoc, Mor.
                                             </p>
                                             <div className="h-64 rounded-lg overflow-hidden">
-                                                <Map lat={25.4383} lng={-101.0053} />
+                                                <Map lat={18.8967001} lng={-98.9837125} />
                                             </div>
                                         </div>
                                     </div>

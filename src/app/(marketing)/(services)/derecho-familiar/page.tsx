@@ -12,19 +12,19 @@ const slides = [
     {
         title: "Soluciones Legales para Familias",
         description: "Manejo sensible de casos de divorcio, custodia y pensión alimenticia. Protección de derechos familiares con enfoque humano.",
-        ctaText: "Agenda tu consulta",
+        ctaText: "Obtén Asesoría Gratis",
         bgImage: "/images/familiar-bg1.avif",
     },
     {
         title: "Gestión de Sucesiones y Herencias",
         description: "Asesoría especializada en testamentos, sucesiones intestadas y división de bienes familiares.",
-        ctaText: "Agenda tu consulta",
+        ctaText: "Obtén Asesoría Gratis",
         bgImage: "/images/familiar-bg2.avif",
     },
     {
         title: "Protección de Menores, acuerdos de guardia y convivencia",
         description: "Defensa legal especializada en convenios de guardia y custodia, patria potestad, así como régimen de visitas. Respeto total al interés superior del menor.",
-        ctaText: "Agenda tu consulta",
+        ctaText: "Obtén Asesoría Gratis",
         bgImage: "/images/familiar-bg3.avif",
     }
 ]
@@ -67,8 +67,8 @@ const HeroCarrousel = dynamic(
 
 export default async function DerechoFamiliar() {
     return (
-        <main className="min-h-screen mt-16 sm:mt-24 flex flex-col">
-            <div className="relative h-[450px] md:h-[800px] overflow-hidden">
+        <main className="min-h-screen flex flex-col">
+            <div className="relative h-[50vh] mt-12 sm:mt-24 sm:h-[70vh] overflow-hidden">
                 <div id="carousel-viewport" className="overflow-hidden h-full w-full">
                     <div className="flex h-full">
                         {slides.map((slide, idx) => (
