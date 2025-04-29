@@ -3,6 +3,7 @@ import Logo from "../Logo";
 import AnimatedLink from "../AnimatedLink";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import ReactFacebookPixel from 'react-facebook-pixel';
 
 const MobileMenu = dynamic(
     () => import("./MobileMenu"),
@@ -79,6 +80,12 @@ export default async function Header() {
                         </div>
                         <Link
                             href="tel:+52 5514083982"
+                            title="Llama ya!"
+                            onClick={() => {
+                                ReactFacebookPixel.track('Contact', {
+                                    method: 'Phone'
+                                })
+                            }}
                             className="bg-primary hover:bg-secondary text-white px-5 py-2.5 text-lg rounded-lg flex items-center transition-all shadow-md whitespace-nowrap"
                         >
                             <svg
@@ -89,10 +96,17 @@ export default async function Header() {
                             >
                                 <path d="M19.44 13c-.22 0-.45-.07-.67-.12a9.44 9.44 0 0 1-1.31-.39 2 2 0 0 0-2.48 1l-.22.45a12.18 12.18 0 0 1-2.66-2 12.18 12.18 0 0 1-2-2.66l.42-.28a2 2 0 0 0 1-2.48 10.33 10.33 0 0 1-.39-1.31c-.05-.22-.09-.45-.12-.68a3 3 0 0 0-3-2.49h-3a3 3 0 0 0-3 3.41 19 19 0 0 0 16.52 16.46h.38a3 3 0 0 0 3-3v-3a3 3 0 0 0-2.47-2.94zm.5 6a1 1 0 0 1-.99 1.15 17 17 0 0 1-14.72-14.73A1 1 0 0 1 5 4.05h3a1 1 0 0 1 1 .79c.04.27.07.54.1.8.11.69.24 1.36.45 2 .15.51.5 1 1 1.22l.38.19c.56.28 1.1.43 1.63.45.53.02 1.06-.12 1.76-.51.36-.2.75-.32 1.15-.32h.06a6.12 6.12 0 0 1 1.47.32c.45.13.95.17 1.47.12a4.6 4.6 0 0 0 1.57-.43 2.25 2.25 0 0 0 1.27-1.25 8.9 8.9 0 0 0 .46-2.02l.1-.77a1 1 0 0 1 1-.8h3a1 1 0 0 1 1 1z" />
                             </svg>
+
                             Llama ya!
                         </Link>
                         <Link
                             href="https://wa.me/+52 5514083982"
+                            onClick={() => {
+                                ReactFacebookPixel.track('Contact', {
+                                    method: 'WhatsApp'
+                                })
+                            }}
+                            title="Escríbenos a WhatsApp"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-[#25D366] hover:bg-[#1DA851] text-white px-5 py-2.5 text-lg rounded-lg flex items-center transition-all shadow-md whitespace-nowrap"
@@ -128,6 +142,11 @@ export default async function Header() {
                             href="tel:+52 5514083982"
                             className="flex items-center justify-center bg-primary hover:bg-secondary text-white p-2 rounded-full"
                             title="Llama ya!"
+                            onClick={() => {
+                                ReactFacebookPixel.track('Contact', {
+                                    method: 'Phone'
+                                })
+                            }}
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -142,8 +161,13 @@ export default async function Header() {
                             href="https://wa.me/+52 5514083982"
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => {
+                                ReactFacebookPixel.track('Contact', {
+                                    method: 'WhatsApp'
+                                })
+                            }}
                             className="flex items-center justify-center bg-[#25D366] hover:bg-[#1DA851] text-white p-2 rounded-full"
-                            title="Escríbenos"
+                            title="Escríbenos a WhatsApp"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -160,6 +184,6 @@ export default async function Header() {
                     </div>
                 </div>
             </div>
-        </header>
+        </header >
     );
 }
