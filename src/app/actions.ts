@@ -1,50 +1,26 @@
 'use server'
 
 // import { adminDb } from "@/lib/firebase_admin";
-// import { Resend } from 'resend';
+import { Resend } from 'resend';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
-import mailchimp from '@mailchimp/mailchimp_marketing';
 
-mailchimp.setConfig({
-    apiKey: process.env.MAILCHIMP_API_KEY,
-    server: process.env.MAILCHIMP_SERVER_PREFIX
-})
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function addToNewsletter(email: string) {
     try {
-        await mailchimp.lists.addListMember(process.env.MAILCHIMP_LIST_ID!, {
-            email_address: email,
-            status: 'subscribed'
+        await resend.contacts.create({
+            email,
+            audienceId: process.env.RESEND_AUDIENCE_ID!,
+            unsubscribed: false
         })
 
         return { success: true }
-    } catch (error: any) {
-        console.error('Mailchimp error:', error.response?.body || error)
-        return {
-            success: false,
-            error: error.response?.body?.title || 'Error al suscribir'
-        }
+    } catch (error) {
+        console.error('Error adding to newsletter:', error)
+        return { success: false }
     }
 }
-
-
-// const resend = new Resend(process.env.RESEND_API_KEY)
-
-// export async function addToNewsletter(email: string) {
-//     try {
-//         await resend.contacts.create({
-//             email,
-//             audienceId: process.env.RESEND_AUDIENCE_ID!,
-//             unsubscribed: false
-//         })
-
-//         return { success: true }
-//     } catch (error) {
-//         console.error('Error adding to newsletter:', error)
-//         return { success: false }
-//     }
-// }
 
 // async function sendStatusEmail(email: string, status: 'approved' | 'rejected', date?: string) {
 //     try {
