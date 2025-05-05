@@ -69,8 +69,8 @@ export default function HeroCarousel({ service, containerId }: HeroCarrouselProp
                         className={`w-3 h-3 sm:w-5 sm:h-5 rounded-full cursor-pointer ${selectedIndex === idx ? 'bg-[#70ac60]' : 'bg-white'
                             }`}
                         onClick={() => emblaApi && emblaApi.scrollTo(idx)}
-                        title={`Go to slide ${idx + 1}`}
-                        aria-label={`Go to slide ${idx + 1}`}
+                        title={`Ir a presentación ${idx + 1}`}
+                        aria-label={`Ir a presentación ${idx + 1}`}
                     />
                 ))}
             </div>

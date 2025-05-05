@@ -3,7 +3,7 @@ import Logo from "../Logo";
 import AnimatedLink from "../AnimatedLink";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import ReactFacebookPixel from 'react-facebook-pixel';
+// import ReactFacebookPixel from 'react-facebook-pixel';
 
 const MobileMenu = dynamic(
     () => import("./MobileMenu"),
@@ -81,11 +81,11 @@ export default async function Header() {
                         <Link
                             href="tel:+52 5514083982"
                             title="Llama ya!"
-                            onClick={() => {
-                                ReactFacebookPixel.track('Contact', {
-                                    method: 'Phone'
-                                })
-                            }}
+                            // onClick={() => {
+                            //     ReactFacebookPixel.track('Contact', {
+                            //         method: 'Phone'
+                            //     })
+                            // }}
                             className="bg-primary hover:bg-secondary text-white px-5 py-2.5 text-lg rounded-lg flex items-center transition-all shadow-md whitespace-nowrap"
                         >
                             <svg
@@ -101,11 +101,11 @@ export default async function Header() {
                         </Link>
                         <Link
                             href="https://wa.me/+52 5514083982"
-                            onClick={() => {
-                                ReactFacebookPixel.track('Contact', {
-                                    method: 'WhatsApp'
-                                })
-                            }}
+                            // onClick={() => {
+                            //     ReactFacebookPixel.track('Contact', {
+                            //         method: 'WhatsApp'
+                            //     })
+                            // }}
                             title="Escríbenos a WhatsApp"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -142,11 +142,11 @@ export default async function Header() {
                             href="tel:+52 5514083982"
                             className="flex items-center justify-center bg-primary hover:bg-secondary text-white p-2 rounded-full"
                             title="Llama ya!"
-                            onClick={() => {
-                                ReactFacebookPixel.track('Contact', {
-                                    method: 'Phone'
-                                })
-                            }}
+                        // onClick={() => {
+                        //     ReactFacebookPixel.track('Contact', {
+                        //         method: 'Phone'
+                        //     })
+                        // }}
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -161,11 +161,11 @@ export default async function Header() {
                             href="https://wa.me/+52 5514083982"
                             target="_blank"
                             rel="noopener noreferrer"
-                            onClick={() => {
-                                ReactFacebookPixel.track('Contact', {
-                                    method: 'WhatsApp'
-                                })
-                            }}
+                            // onClick={() => {
+                            //     ReactFacebookPixel.track('Contact', {
+                            //         method: 'WhatsApp'
+                            //     })
+                            // }}
                             className="flex items-center justify-center bg-[#25D366] hover:bg-[#1DA851] text-white p-2 rounded-full"
                             title="Escríbenos a WhatsApp"
                         >

@@ -3,7 +3,7 @@
 import { addToNewsletter } from "@/app/actions";
 import { useState } from "react";
 import { FiCheckCircle, FiSend, FiX, FiXCircle } from "react-icons/fi";
-import ReactFacebookPixel from 'react-facebook-pixel';
+// import ReactFacebookPixel from 'react-facebook-pixel';
 
 export default function NewsLetter() {
     const [email, setEmail] = useState<string>("");
@@ -18,10 +18,10 @@ export default function NewsLetter() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
 
-        ReactFacebookPixel.track('Lead', {
-            content_category: 'Newsletter',
-            email: email,
-        })
+        // ReactFacebookPixel.track('Lead', {
+        //     content_category: 'Newsletter',
+        //     email: email,
+        // })
 
         setIsSubmitting(true)
 

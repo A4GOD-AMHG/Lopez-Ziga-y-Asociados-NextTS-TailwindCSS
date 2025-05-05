@@ -1,28 +1,20 @@
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
 import { ScrollToTop } from './components/ScrollToTop';
-import Script from 'next/script';
+// import Script from 'next/script';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ventas.lopezzigayasociados.com.mx/'),
+  metadataBase: new URL('https://lopezzigayasociados.com.mx/'),
   title: {
-    default: 'Asesoría Legal Gratuita - López Ziga y Asociados',
-    template: '%s | Consulta Jurídica Inmediata'
+    default: 'López Ziga y Asociados',
+    template: '%s | López Ziga y Asociados'
   },
-  description: '¿Problemas legales urgentes? Obtén tu primera asesoría GRATIS por WhatsApp con abogados especializados en Derecho Penal, Familiar e Inmobiliario. Soluciones inmediatas en CDMX y todo México. ¡Contáctanos ahora mismo!',
-  keywords: [
-    'asesoría legal gratis whatsapp',
-    'abogados en línea México',
-    'consulta jurídica inmediata',
-    'derecho penal por WhatsApp',
-    'abogados familiares 24/7',
-    'ventas.lopezzigayasociados.com.mx'
-  ],
+  description: 'Con más de 20 años de experiencia y siete años en nuestro actual Despacho Jurídico, nos especializamos en Derecho Penal, Familiar e Inmobiliario. Nuestro equipo de abogados garantiza transparencia y acceso constante a los expedientes digitales de nuestros clientes empresariales, proporcionando un asesoramiento continuo y personalizado.',
+  keywords: ['abogados México', 'derecho familiar', 'derecho penal', 'derecho inmobiliario',],
   authors: [{ name: 'Emyux', url: "https://emyux.com" }],
   robots: {
     index: true,
     follow: true,
-    nocache: false,
     'max-image-preview': 'large',
     'max-video-preview': -1,
     'max-snippet': -1,
@@ -33,7 +25,8 @@ export const metadata: Metadata = {
     siteName: 'López Ziga y Asociados',
     title: 'López Ziga y Asociados',
     url: 'https://lopezzigayasociados.com.mx/',
-    description: 'Habla AHORA con un abogado especializado por WhatsApp sin costo inicial. Soluciones inmediatas en casos de familia, propiedades y derecho penal. ¡Primera consulta 100% gratuita!',
+    description:
+      'Con más de 20 años de experiencia y siete años en nuestro actual Despacho Jurídico, nos especializamos en Derecho Penal, Familiar e Inmobiliario. Nuestro equipo de abogados garantiza transparencia y acceso constante a los expedientes digitales de nuestros clientes empresariales, proporcionando un asesoramiento continuo y personalizado.',
     images: [
       {
         url: '/images/logo.png',
@@ -45,13 +38,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Asesoría Legal GRATIS por WhatsApp ⚖️',
-    description: '¿Necesitas un abogado urgente? Escríbenos por WhatsApp y recibe orientación jurídica profesional en menos de 15 minutos. ¡Sin costo inicial!',
+    title: 'Oscar Edwin Lopez – Socio en López Ziga & Asociados',
+    description:
+      'Abogado Postulante, Socio en López Ziga & Asociados, habitante de Naucalpan, Edo. Mex.; orgulloso de origen zapoteca, paisano de corazón.',
     images: ['https://x.com/oscaredwinlopez/photo'],
     creator: 'https://emyux.com',
-  },
-  alternates: {
-    canonical: 'https://ventas.lopezzigayasociados.com.mx'
   },
   icons: {
     icon: '/favicon.ico',
@@ -69,7 +60,9 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body className={`flex flex-col min-h-screen bg-gray-50 overflow-y-scroll scrollbar-hide scroll-smooth`}>
-        <Script
+        {children}
+        <ScrollToTop />
+        {/* <Script
           id="fb-pixel"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -87,9 +80,7 @@ export default function RootLayout({
                 fbq('track', 'PageView');
             `,
           }}
-        />
-        {children}
-        <ScrollToTop />
+        /> */}
       </body>
     </html>
   )

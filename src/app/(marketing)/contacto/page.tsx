@@ -1,8 +1,5 @@
-
-import dynamic from 'next/dynamic';
+import ClientMap from '@/app/components/ClientMap';
 import { FiMapPin } from 'react-icons/fi';
-
-const Map = dynamic(() => import("@/app/components/Map"));
 
 export default async function ContactPage() {
     return (
@@ -74,7 +71,7 @@ export default async function ContactPage() {
                                                 Mexico Méx MX, Valle de Zumpango 15, 53050 Naucalpan de Juárez, Méx., México
                                             </p>
                                             <div className="h-64 rounded-lg overflow-hidden">
-                                                <Map lat={19.479645} lng={-99.2361324} />
+                                                <ClientMap lat={19.479645} lng={-99.2361324} />
                                             </div>
                                         </div>
 
@@ -88,7 +85,7 @@ export default async function ContactPage() {
                                                 62736 Cocoyoc, Mor.
                                             </p>
                                             <div className="h-64 rounded-lg overflow-hidden">
-                                                <Map lat={18.8967001} lng={-98.9837125} />
+                                                <ClientMap lat={18.8967001} lng={-98.9837125} />
                                             </div>
                                         </div>
                                     </div>

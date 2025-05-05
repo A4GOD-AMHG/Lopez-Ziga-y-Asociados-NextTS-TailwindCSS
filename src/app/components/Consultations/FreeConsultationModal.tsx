@@ -1,6 +1,6 @@
 'use client'
 
-import ReactFacebookPixel from 'react-facebook-pixel';
+// import ReactFacebookPixel from 'react-facebook-pixel';
 import { FiX, FiSend } from 'react-icons/fi';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -69,15 +69,15 @@ export default function FreeConsultationModal({
         }
 
 
-        ReactFacebookPixel.track('Lead', {
-            content_category: 'Asesoría Legal Gratis',
-            service: formData.service,
-            urgency: formData.urgency,
-            email: formData.email,
-            name: formData.name
+        // ReactFacebookPixel.track('Lead', {
+        //     content_category: 'Asesoría Legal Gratis',
+        //     service: formData.service,
+        //     urgency: formData.urgency,
+        //     email: formData.email,
+        //     name: formData.name
 
-            // TODO: Hashear info sensible 
-        })
+        //     // TODO: Hashear info sensible 
+        // })
 
         const message = `Hola, soy ${formData.name} de correo ${formData.email}.
 El caso esta en estado ${formData.statusCase}.

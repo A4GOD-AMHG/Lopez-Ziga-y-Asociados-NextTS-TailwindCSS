@@ -1,8 +1,8 @@
 'use client'
 
-import { MapContainer, TileLayer, Marker } from 'react-leaflet'
-import L from 'leaflet'
-import { useEffect, useState } from 'react'
+import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import L from 'leaflet';
+import { useEffect, useState } from 'react';
 
 const createCustomIcon = (iconUrl: string) => {
     return L.icon({
