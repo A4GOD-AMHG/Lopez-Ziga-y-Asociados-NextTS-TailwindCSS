@@ -120,3 +120,12 @@ tr:nth-child(even) {
 .striped-row:nth-child(even) {
   background-color: #f9fafb;
 }
+
+input[type="checkbox"]:checked {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: var(--color-primary);
+}

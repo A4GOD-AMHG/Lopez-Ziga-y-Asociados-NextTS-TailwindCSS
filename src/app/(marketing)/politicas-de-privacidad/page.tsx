@@ -2,13 +2,13 @@ export default function PrivacyPage() {
     return (
         <main className="min-h-screen mt-8 sm:mt-12 bg-white">
             <section className="mx-auto py-16 max-w-6xl">
-                <div className="bg-white rounded-xl p-8 md:p-12">
+                <div className="bg-white rounded-xl p-0 md:p-12">
                     <h1 className="text-5xl font-bold text-primary mb-8 text-center">
                         Políticas de Privacidad
                     </h1>
 
                     <div className="space-y-8 text-gray-700">
-                        <section>
+                        <section className="px-8 md:p-12">
                             <h2 className="text-3xl font-semibold text-primary mb-4">
                                 1. Introducción
                             </h2>
@@ -21,7 +21,7 @@ export default function PrivacyPage() {
                             </p>
                         </section>
 
-                        <section>
+                        <section className="px-8 md:p-12">
                             <h2 className="text-3xl font-semibold text-primary mb-4">
                                 2. Datos que Recopilamos
                             </h2>
@@ -33,7 +33,7 @@ export default function PrivacyPage() {
                             </ul>
                         </section>
 
-                        <section>
+                        <section className="px-8 md:p-12">
                             <h2 className="text-3xl font-semibold text-primary mb-4">
                                 3. Finalidad del Tratamiento
                             </h2>
@@ -49,7 +49,7 @@ export default function PrivacyPage() {
                             </ul>
                         </section>
 
-                        <section>
+                        <section className="px-8 md:p-12">
                             <h2 className="text-3xl font-semibold text-primary mb-4">
                                 4. Transferencia de Datos
                             </h2>
@@ -63,7 +63,7 @@ export default function PrivacyPage() {
                             </ul>
                         </section>
 
-                        <section>
+                        <section className="px-8 md:p-12">
                             <h2 className="text-3xl font-semibold text-primary mb-4">
                                 5. Derechos ARCO
                             </h2>
@@ -80,12 +80,12 @@ export default function PrivacyPage() {
                                 Para ejercer estos derechos, enviar solicitud a:
                                 <a href="mailto:protecciondedatos@lopezzigayasociados.com.mx"
                                     className="text-primary hover:text-secondary ml-1">
-                                    protecciondedatos@lopezzigayasociados.com.mx
+                                    Correo de Protección
                                 </a>
                             </p>
                         </section>
 
-                        <section>
+                        <section className="px-8 md:p-12">
                             <h2 className="text-3xl font-semibold text-primary mb-4">
                                 6. Medidas de Seguridad
                             </h2>
@@ -95,7 +95,7 @@ export default function PrivacyPage() {
                             </p>
                         </section>
 
-                        <section>
+                        <section className="px-8 md:p-12">
                             <h2 className="text-3xl font-semibold text-primary mb-4">
                                 7. Cookies y Tecnologías Web
                             </h2>
@@ -105,7 +105,7 @@ export default function PrivacyPage() {
                             </p>
                         </section>
 
-                        <section>
+                        <section className="px-8 md:p-12">
                             <h2 className="text-3xl font-semibold text-primary mb-4">
                                 8. Cambios a la Política
                             </h2>
@@ -115,7 +115,7 @@ export default function PrivacyPage() {
                             </p>
                         </section>
 
-                        <section className="pt-6">
+                        <section className="pt-6 px-8 md:p-12">
                             <p className="text-lg font-semibold">
                                 Última actualización: 25 de abril de 2025
                             </p>

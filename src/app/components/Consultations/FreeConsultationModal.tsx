@@ -86,10 +86,23 @@ Tengo una urgencia ${formData.urgency}.
 Descripción de mi caso:
 ${formData.description}`;
 
-        const url = `https://wa.me/525514083982?text=${encodeURIComponent(
+        const url = `https://api.whatsapp.com/send?phone=525514083982&text=${encodeURIComponent(
             message
         )}`;
 
+        const resetForm = () => {
+            setFormData({
+                name: '',
+                email: '',
+                service: service || SERVICE_OPTIONS[0],
+                statusCase: CASE_STATUS_OPTIONS[0],
+                urgency: URGENCY_OPTIONS[1],
+                description: '',
+                acceptPolicy: false,
+            });
+        };
+
+        resetForm();
         window.open(url, '_blank');
         onClose();
     };
@@ -103,7 +116,7 @@ ${formData.description}`;
         >
             <div
                 onClick={e => e.stopPropagation()}
-                className="bg-gradient-to-br from-white to-blue-50 rounded-xl w-full max-w-lg p-6 relative overflow-y-auto max-h-[90vh] shadow-xl"
+                className="bg-gradient-to-br bg-white rounded-xl w-full max-w-lg p-6 relative overflow-y-auto max-h-[90vh] shadow-xl"
             >
                 <button
                     onClick={onClose}
@@ -213,17 +226,25 @@ ${formData.description}`;
                     <div className="flex items-start mt-4">
                         <div className="flex items-center h-5">
                             <input
-                                id="privacy-policy"
                                 type="checkbox"
+                                id="privacy-policy"
+                                className="absolute opacity-0 w-6 h-6 cursor-pointer"
                                 required
                                 checked={formData.acceptPolicy}
                                 onChange={e => handleChange('acceptPolicy', e.target.checked)}
-                                className="w-4 h-4 border border-gray-300 rounded bg-white focus:ring-primary"
                             />
+                            <div className={`w-5 h-5 border cursor-pointer rounded flex items-center justify-center 
+    ${formData.acceptPolicy ? 'bg-primary border-primary' : 'bg-white border-gray-300'}`}>
+                                {formData.acceptPolicy && (
+                                    <svg className="w-5 h-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                    </svg>
+                                )}
+                            </div>
                         </div>
                         <label
                             htmlFor="privacy-policy"
-                            className="ml-3 text-sm text-gray-600"
+                            className="ml-3 text-sm cursor-pointer text-gray-600"
                         >
                             Acepto las{' '}
                             <Link

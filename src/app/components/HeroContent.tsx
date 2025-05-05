@@ -15,7 +15,7 @@ export default function HeroContent() {
                     Asesorías <br className="hidden md:block" />
                     <span className="text-primary">Legales</span> de Vanguardia
                 </h1>
-                <p className="text-base sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                <p className="text-base sm:text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
                     Recibe asesoramiento jurídico personalizado y efectivo, con más de 20 años de experiencia en derecho público y privado.
                 </p>
 
