@@ -2,70 +2,95 @@ export default function PrivacyPage() {
     return (
         <main className="min-h-screen mt-8 sm:mt-12 bg-white">
             <section className="mx-auto py-16 max-w-6xl">
-                <div className="bg-white rounded-xl p-0 md:p-12">
-                    <h1 className="text-5xl font-bold text-primary mb-8 text-center">
-                        Políticas de Privacidad
+                <div className="bg-white rounded-xl p-0 md:px-12 md:py-6">
+                    <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-8 text-center">
+                        Aviso de Privacidad
                     </h1>
 
-                    <div className="space-y-8 text-gray-700">
-                        <section className="px-8 md:p-12">
-                            <h2 className="text-3xl font-semibold text-primary mb-4">
-                                1. Introducción
+                    <div className="text-gray-700">
+                        <section className="px-8 py-6 md:px-12">
+                            <h2 className="text-2xl sm:text-3xl font-semibold text-primary mb-4">
+                                1. Responsable del Tratamiento
                             </h2>
                             <p className="mb-4">
-                                En López Ziga & Asociados, S.C., con domicilio en Valle de Zumpango 15,
-                                Naucalpan de Juárez, México, estamos comprometidos con la protección de
-                                sus datos personales. Esta política rige el tratamiento de la información
-                                personal que recopilamos a través de nuestro sitio web y en la prestación
-                                de nuestros servicios legales.
+                                Oscar Edwin López Ziga, en su carácter de socio director de López Ziga & Asociados,
+                                con domicilio en Valle de Zumpango número 15, Colonia El Mirador, Naucalpan de Juárez,
+                                Estado de México, C.P. 53050, es responsable del tratamiento de sus datos personales
+                                conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.
                             </p>
                         </section>
 
-                        <section className="px-8 md:p-12">
-                            <h2 className="text-3xl font-semibold text-primary mb-4">
-                                2. Datos que Recopilamos
+                        <section className="px-8 py-6 md:px-12">
+                            <h2 className="text-2xl sm:text-3xl font-semibold text-primary mb-4">
+                                2. Datos Personales Recabados
                             </h2>
                             <ul className="list-disc pl-6 space-y-2">
-                                <li>Datos de identificación (nombre, dirección, Numero de Teléfono)</li>
-                                <li>Datos de contacto (correo electrónico, teléfono)</li>
+                                <li>Datos de identificación (nombre, dirección, teléfono)</li>
+                                <li>Puesto y lugar de trabajo</li>
+                                <li>Información de localización</li>
+                                <li>Datos de contacto (correo electrónico)</li>
                                 <li>Información relacionada con casos legales</li>
-                                <li>Datos de navegación (cookies, dirección IP)</li>
                             </ul>
                         </section>
 
-                        <section className="px-8 md:p-12">
-                            <h2 className="text-3xl font-semibold text-primary mb-4">
-                                3. Finalidad del Tratamiento
+                        <section className="px-8 py-6 md:px-12">
+                            <h2 className="text-2xl sm:text-3xl font-semibold text-primary mb-4">
+                                3. Finalidades del Tratamiento
+                            </h2>
+                            <ul className="list-disc pl-6 space-y-2">
+                                <li>Envío de cotizaciones y descripciones de servicios legales</li>
+                                <li>Atención de consultas jurídicas</li>
+                                <li>Comunicación sobre eventos y reformas legales</li>
+                                <li>Gestión de clientes y prospectos</li>
+                                <li>Actividades de mercadotecnia y prospección comercial</li>
+                                <li>Mejora continua de nuestros servicios</li>
+                            </ul>
+                        </section>
+
+                        <section className="px-8 py-6 md:px-12">
+                            <h2 className="text-2xl sm:text-3xl font-semibold text-primary mb-4">
+                                4. Uso de Imágenes en Eventos
                             </h2>
                             <p className="mb-4">
-                                Los datos personales recabados serán utilizados para:
+                                Las imágenes tomadas durante eventos organizados por nuestra firma podrán utilizarse con:
                             </p>
                             <ul className="list-disc pl-6 space-y-2">
-                                <li>Prestación de servicios legales especializados</li>
-                                <li>Facturación y procesos administrativos</li>
-                                <li>Comunicación sobre casos y actualizaciones legales</li>
-                                <li>Cumplimiento de obligaciones legales</li>
-                                <li>Mejora de nuestros servicios y sitio web</li>
+                                <li>Fines informativos y periodísticos (sin requerir consentimiento)</li>
+                                <li>Fines publicitarios (requerirá consentimiento expreso previo)</li>
                             </ul>
                         </section>
 
-                        <section className="px-8 md:p-12">
-                            <h2 className="text-3xl font-semibold text-primary mb-4">
-                                4. Transferencia de Datos
+                        <section className="px-8 py-6 md:px-12">
+                            <h2 className="text-2xl sm:text-3xl font-semibold text-primary mb-4">
+                                5. Transferencia de Datos
                             </h2>
                             <p className="mb-4">
-                                Sus datos personales podrán ser compartidos con:
+                                Sus datos podrán compartirse con:
                             </p>
                             <ul className="list-disc pl-6 space-y-2">
-                                <li>Autoridades judiciales y administrativas competentes</li>
-                                <li>Proveedores de servicios necesarios para la gestión de casos</li>
-                                <li>Organismos reguladores cuando sea requerido por ley</li>
+                                <li>Profesionales auxiliares (contadores, peritos)</li>
+                                <li>Prestadores de servicios informáticos</li>
+                                <li>Plataformas de cobranza autorizadas</li>
+                                <li>Autoridades competentes cuando sea requerido por ley</li>
                             </ul>
                         </section>
 
-                        <section className="px-8 md:p-12">
-                            <h2 className="text-3xl font-semibold text-primary mb-4">
-                                5. Derechos ARCO
+                        <section className="px-8 py-6 md:px-12">
+                            <h2 className="text-2xl sm:text-3xl font-semibold text-primary mb-4">
+                                6. Limitación del Tratamiento
+                            </h2>
+                            <p className="mb-4">
+                                Para limitar el uso de tus datos personales, envía solicitud al siguiente correo:
+                            </p>
+                            <a href="mailto:contacto@asesorialopezzigayasociados.com"
+                                className="text-primary hover:text-secondary -ml-7 sm:mx-0 text-center font-semibold">
+                                contacto@asesorialopezzigayasociados.com
+                            </a>
+                        </section>
+
+                        <section className="px-8 py-6 md:px-12">
+                            <h2 className="text-2xl sm:text-3xl font-semibold text-primary mb-4">
+                                7. Derechos ARCO
                             </h2>
                             <p className="mb-4">
                                 Usted tiene derecho a:
@@ -73,55 +98,45 @@ export default function PrivacyPage() {
                             <ul className="list-disc pl-6 space-y-2">
                                 <li>Acceder a sus datos personales</li>
                                 <li>Rectificar información inexacta</li>
-                                <li>Cancelar el uso de sus datos</li>
-                                <li>Oponerse al tratamiento de los mismos</li>
+                                <li>Cancelar el tratamiento de datos</li>
+                                <li>Oponerse al uso específico</li>
+                                <li>Revocar el consentimiento otorgado</li>
                             </ul>
-                            <p className="mt-4">
-                                Para ejercer estos derechos, enviar solicitud a:
-                                <a href="mailto:protecciondedatos@lopezzigayasociados.com.mx"
-                                    className="text-primary hover:text-secondary ml-1">
-                                    Correo de Protección
-                                </a>
-                            </p>
                         </section>
 
-                        <section className="px-8 md:p-12">
-                            <h2 className="text-3xl font-semibold text-primary mb-4">
-                                6. Medidas de Seguridad
+                        <section className="px-8 py-6 md:px-12">
+                            <h2 className="text-2xl sm:text-3xl font-semibold text-primary mb-4">
+                                8. Tecnologías de Seguimiento
                             </h2>
                             <p>
-                                Implementamos protocolos de seguridad SSL, encriptación de datos y
-                                controles de acceso físicos y electrónicos para proteger su información.
+                                Este sitio web <strong>no utiliza cookies</strong> ni tecnologías automatizadas
+                                para recabar datos personales de los usuarios.
                             </p>
                         </section>
 
-                        <section className="px-8 md:p-12">
-                            <h2 className="text-3xl font-semibold text-primary mb-4">
-                                7. Cookies y Tecnologías Web
+                        <section className="px-8 py-6 md:px-12">
+                            <h2 className="text-2xl sm:text-3xl font-semibold text-primary mb-4">
+                                9. Modificaciones al Aviso
                             </h2>
                             <p>
-                                Utilizamos cookies para analizar el tráfico web y personalizar contenido.
-                                Puede administrar su configuración mediante su navegador.
+                                Nos reservamos el derecho de actualizar este aviso. Las modificaciones
+                                estarán disponibles en nuestro sitio web con fecha de vigencia.
                             </p>
                         </section>
 
-                        <section className="px-8 md:p-12">
-                            <h2 className="text-3xl font-semibold text-primary mb-4">
-                                8. Cambios a la Política
+                        <section className="pt-6 px-8 py-6 md:px-12">
+                            <h2 className="text-2xl sm:text-3xl font-semibold text-primary mb-4">
+                                10. Legislación Aplicable
                             </h2>
-                            <p>
-                                Nos reservamos el derecho de modificar esta política. Las actualizaciones
-                                se publicarán en nuestro sitio web con fecha de vigencia.
+                            <p className="mb-4">
+                                Este aviso se rige por la legislación vigente en los Estados Unidos Mexicanos.
                             </p>
-                        </section>
-
-                        <section className="pt-6 px-8 md:p-12">
                             <p className="text-lg font-semibold">
                                 Última actualización: 25 de abril de 2025
                             </p>
                             <p className="mt-4">
-                                Para cualquier duda sobre esta política, contacte a nuestro Oficial de
-                                Privacidad al teléfono <a href="tel:+525514083982"
+                                Para ejercicio de derechos ARCO o dudas sobre este aviso:<br />
+                                Teléfono: <a href="tel:+525514083982"
                                     className="text-primary hover:text-secondary">+52 55 1408 3982</a>
                             </p>
                         </section>

@@ -1,6 +1,5 @@
 'use client'
 
-// import ReactFacebookPixel from 'react-facebook-pixel';
 import { FiX, FiSend } from 'react-icons/fi';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -67,17 +66,6 @@ export default function FreeConsultationModal({
             alert('Por favor, complete los campos name y Email.');
             return;
         }
-
-
-        // ReactFacebookPixel.track('Lead', {
-        //     content_category: 'Asesoría Legal Gratis',
-        //     service: formData.service,
-        //     urgency: formData.urgency,
-        //     email: formData.email,
-        //     name: formData.name
-
-        //     // TODO: Hashear info sensible 
-        // })
 
         const message = `Hola, soy ${formData.name} de correo ${formData.email}.
 El caso esta en estado ${formData.statusCase}.
@@ -260,7 +248,16 @@ ${formData.description}`;
 
                     <button
                         type="submit"
-                        className="w-full bg-gradient-to-r cursor-pointer from-primary to-secondary hover:opacity-90 text-white font-semibold py-4 rounded-lg transition-all flex items-center justify-center gap-2 mt-6"
+                        disabled={
+                            !formData.name ||
+                            !formData.email ||
+                            !formData.description ||
+                            !formData.acceptPolicy
+                        }
+                        className={`w-full bg-gradient-to-r ${(!formData.name || !formData.email || !formData.description || !formData.acceptPolicy)
+                            ? "cursor-not-allowed opacity-70"
+                            : "cursor-pointer hover:opacity-90"
+                            } from-primary to-secondary text-white font-semibold py-4 rounded-lg transition-all flex items-center justify-center gap-2 mt-6`}
                     >
                         <FiSend size={20} />
                         Obtener Asesoría Gratis

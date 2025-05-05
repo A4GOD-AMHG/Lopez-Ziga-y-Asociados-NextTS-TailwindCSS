@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
 import { ScrollToTop } from './components/ScrollToTop';
-// import Script from 'next/script';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://lopezzigayasociados.com.mx/'),
@@ -62,13 +62,13 @@ export default function RootLayout({
       <body className={`flex flex-col min-h-screen bg-gray-50 overflow-y-scroll scrollbar-hide scroll-smooth`}>
         {children}
         <ScrollToTop />
-        {/* <Script
+        <Script
           id="fb-pixel"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s){
-                if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
                 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
                 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
                 n.queue=[];t=b.createElement(e);t.async=!0;
@@ -76,11 +76,25 @@ export default function RootLayout({
                 s.parentNode.insertBefore(t,s)}(window, document,'script',
                 'https://connect.facebook.net/en_US/fbevents.js');
                 
-                fbq('init', '${process.env.NEXT_PUBLIC_FB_PIXEL_ID}');
-                fbq('track', 'PageView');
-            `,
+                fbq('init', '1068142238466336');
+                fbq('track', 'Visita al Sitio Web');
+                
+                window.fbq = window.fbq || function(...args) {
+                  (window.fbq.queue = window.fbq.queue || []).push(args);
+                };
+            `
           }}
-        /> */}
+        />
+
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=1068142238466336&ev=PageView&noscript=1"
+            alt="Facebook Pixel Tracker"
+          />
+        </noscript>
       </body>
     </html>
   )

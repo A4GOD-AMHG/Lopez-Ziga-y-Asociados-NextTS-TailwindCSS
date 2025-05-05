@@ -81,11 +81,6 @@ export default async function Header() {
                         <a
                             href="tel:+525514083982"
                             title="Llama ya!"
-                            // onClick={() => {
-                            //     ReactFacebookPixel.track('Contact', {
-                            //         method: 'Phone'
-                            //     })
-                            // }}
                             className="bg-primary hover:bg-secondary text-white px-5 py-2.5 text-lg rounded-lg flex items-center transition-all shadow-md whitespace-nowrap"
                         >
                             <svg
@@ -101,12 +96,6 @@ export default async function Header() {
                         </a>
                         <a
                             href="https://api.whatsapp.com/send?phone=525514083982"
-                            // href="https://wa.me/+525514083982"
-                            // onClick={() => {
-                            //     ReactFacebookPixel.track('Contact', {
-                            //         method: 'WhatsApp'
-                            //     })
-                            // }}
                             title="Escríbenos a WhatsApp"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -143,11 +132,6 @@ export default async function Header() {
                             href="tel:+525514083982"
                             className="flex items-center justify-center bg-primary hover:bg-secondary text-white p-2 rounded-full"
                             title="Llama ya!"
-                        // onClick={() => {
-                        //     ReactFacebookPixel.track('Contact', {
-                        //         method: 'Phone'
-                        //     })
-                        // }}
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -159,15 +143,9 @@ export default async function Header() {
                             </svg>
                         </a>
                         <a
-                            // href="https://wa.me/+525514083982"
                             href="https://api.whatsapp.com/send?phone=525514083982"
                             target="_blank"
                             rel="noopener noreferrer"
-                            // onClick={() => {
-                            //     ReactFacebookPixel.track('Contact', {
-                            //         method: 'WhatsApp'
-                            //     })
-                            // }}
                             className="flex items-center justify-center bg-[#25D366] hover:bg-[#1DA851] text-white p-2 rounded-full"
                             title="Escríbenos a WhatsApp"
                         >
